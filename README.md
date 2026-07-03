@@ -66,10 +66,20 @@ portfolio-raian/
 - [x] Etapa 1 — Hero estilizado + primeiro JavaScript
 - [x] Etapa 2 — Menu mobile (funções do zero)
 - [x] Etapa 3 — Cards de projetos (array + forEach)
-- [x] Etapa 4 (parte 1) — Menu fecha ao clicar em link
-- [ ] Etapa 4 (parte 2) — Destacar seção ativa no scroll
-- [ ] Etapa 5 — Links reais de contato
-- [ ] Etapa 6 — Animações e detalhes finais
+- [x] Etapa 4 — Menu fecha ao clicar em link + destaque no scroll
+- [x] Etapa 5 — Links reais de contato
+- [x] Etapa 6 — Polimento visual (Skills, Sobre, footer)
+
+### Próximas etapas (planejado)
+
+- [ ] **Etapa 7** — Página de detalhes do projeto (print + descrição + botão "Ver ao vivo")
+  - Card abre `projeto.html?id=casamento` dentro do portfólio
+  - JS novo: `URLSearchParams` para ler o `id` da URL
+- [ ] **Etapa 8** — Avatar/foto no Hero
+- [ ] **Etapa 9** — Ícones das tecnologias (HTML, CSS, JS, Java…)
+- [ ] **Etapa 10** — Visual premium (formas no fundo, barra social fixa)
+
+> Domínio futuro: **raiandev.com.br**
 
 ## Como rodar localmente
 
