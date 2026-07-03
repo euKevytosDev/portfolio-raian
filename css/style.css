@@ -53,9 +53,10 @@ body {
 /* Cada seção ocupa a altura mínima da tela (efeito "página inteira") */
 section {
   padding: var(--espacamento-secao) 0;
-  min-height: 100vh; /* 100% da altura da janela */
+  min-height: 100vh;
   display: flex;
-  align-items: center; /* centraliza o conteúdo verticalmente */
+  align-items: center;
+  scroll-margin-top: 80px; /* compensa o header fixo ao clicar no menu */
 }
 
 /* Botão de destaque (usado no Hero e Contato) */
@@ -84,45 +85,40 @@ section {
   }
 }
 
-  /* --- Cores principais --- 
-  --cor-fundo: #0f0f0f;            fundo escuro do site (estilo profissional) 
-  --cor-fundo-card: #1a1a1a;       fundo dos cards (projetos, skills) 
-  --cor-texto: #e8e8e8;            texto principal (quase branco)
-  --cor-texto-suave: #a0a0a0;      textos secundários, descrições 
-  --cor-destaque: #6c63ff;         roxo — cor de destaque (botões, links) 
-  --cor-destaque-hover: #5a52d5;   roxo mais escuro ao passar o mouse */
-
-  /* esse lixo acima é pra eu visualizar sem ficar mudando de aba por enquanto */
-
 .hero {
-  text-align: left; 
-} 
+  text-align: left;
+}
 
 .hero-saudacao {
   font-size: var(--tamanho-texto);
-  color: var(--cor-texto-suave); /* pode ir me dando correção de melhorias */
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espacamento-pequeno);
 }
 
 .hero-nome {
   font-size: var(--tamanho-titulo);
   color: var(--cor-texto);
+  margin-bottom: var(--espacamento-pequeno);
 }
 
 .hero-cargo {
   color: var(--cor-destaque);
+  margin-bottom: var(--espacamento-medio);
 }
 
 .hero-descricao {
   max-width: 500px;
   color: var(--cor-texto-suave);
-}   
+  margin-bottom: var(--espacamento-grande);
+}
 
 .header {
   position: sticky;
   top: 0;
   background-color: var(--cor-fundo);
   z-index: 100;
-  padding: 15px;
+  padding: var(--espacamento-medio) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* abaxo o css do grid para o projetos */
@@ -143,9 +139,24 @@ section {
   margin-bottom: var(--espacamento-pequeno);
 }
 
-.projeto a {
+.projeto-card p {
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espacamento-medio);
+}
+
+.projeto-card a {
   color: var(--cor-destaque);
   text-decoration: none;
+  font-weight: 600;
+}
+
+.projeto-card a:hover {
+  color: var(--cor-destaque-hover);
+}
+
+.nav-link.ativo {
+  color: var(--cor-destaque);
+  font-weight: 600;
 }
 
 
@@ -191,6 +202,68 @@ section {
   border: none;
   cursor: pointer;
 }
+
+.sobre-conteudo p {
+  color: var(--cor-texto-suave);
+  max-width: 600px;
+  margin-bottom: var(--espacamento-medio);
+}
+
+.skills-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacamento-medio);
+  list-style: none;
+}
+
+.skill-item {
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto);
+  padding: var(--espacamento-pequeno) var(--espacamento-medio);
+  border-radius: var(--borda-arredondada);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+.contato-texto {
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espacamento-grande);
+}
+
+.contato-links {
+  display: flex;
+  gap: var(--espacamento-medio);
+  flex-wrap: wrap; /* no celular quebra linha se nao couber */
+}
+
+.contato-link {
+  padding: var(--espacamento-pequeno) var(--espacamento-grande);
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto);
+  text-decoration: none;
+  border-radius: var(--borda-arredondada);
+  transition: var(--transicao-rapida);
+}
+
+.contato-link:hover {
+  background-color: var(--cor-destaque);
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.footer {
+  padding: var(--espacamento-grande) 0;
+  text-align: center;
+  color: var(--cor-texto-suave);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-logo {
+  color: var(--cor-destaque);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
 
 /* --- No celular --- */
 @media (max-width: 768px) {
