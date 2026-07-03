@@ -83,3 +83,128 @@ section {
     padding: var(--espacamento-grande) 0;
   }
 }
+
+  /* --- Cores principais --- 
+  --cor-fundo: #0f0f0f;            fundo escuro do site (estilo profissional) 
+  --cor-fundo-card: #1a1a1a;       fundo dos cards (projetos, skills) 
+  --cor-texto: #e8e8e8;            texto principal (quase branco)
+  --cor-texto-suave: #a0a0a0;      textos secundários, descrições 
+  --cor-destaque: #6c63ff;         roxo — cor de destaque (botões, links) 
+  --cor-destaque-hover: #5a52d5;   roxo mais escuro ao passar o mouse */
+
+  /* esse lixo acima é pra eu visualizar sem ficar mudando de aba por enquanto */
+
+.hero {
+  text-align: left; 
+} 
+
+.hero-saudacao {
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto-suave); /* pode ir me dando correção de melhorias */
+}
+
+.hero-nome {
+  font-size: var(--tamanho-titulo);
+  color: var(--cor-texto);
+}
+
+.hero-cargo {
+  color: var(--cor-destaque);
+}
+
+.hero-descricao {
+  max-width: 500px;
+  color: var(--cor-texto-suave);
+}   
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: var(--cor-fundo);
+  z-index: 100;
+  padding: 15px;
+}
+
+/* abaxo o css do grid para o projetos */
+
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--espacamento-grande);
+}
+
+.projeto-card {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-grande);
+  border-radius: var(--borda-arredondada);
+}
+
+.projeto-card h3 {
+  margin-bottom: var(--espacamento-pequeno);
+}
+
+.projeto a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+
+
+
+
+/* As 3 barrinhas do hambúrguer */
+.nav-toggle span {
+  display: block;              /* cada span vira um "bloco" */
+  width: 25px;                 /* largura da barra */
+  height: 3px;                 /* espessura da barra */
+  background-color: var(--cor-texto); /* cor (senão fica invisível) */
+  margin: 4px 0;               /* espaço entre as barras */
+  border-radius: 2px;          /* cantinhos arredondados */
+}
+
+/* --- Menu de navegação --- */
+.nav {
+  display: flex;
+  justify-content: space-between; /* logo na esquerda, links na direita */
+  align-items: center;
+}
+
+.nav-lista {
+  display: flex;
+  gap: var(--espacamento-medio); /* espaço entre os links */
+  list-style: none; /* tira as bolinhas da lista */
+}
+
+.nav-link {
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--cor-destaque);
+}
+
+/* Hambúrguer escondido no desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- No celular --- */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* mostra o ☰ */
+  }
+
+  .nav-lista {
+    display: none; /* esconde o menu por padrão */
+    flex-direction: column; /* links empilhados */
+    width: 100%;
+  }
+
+  .nav-lista.ativo {
+    display: flex; /* quando tem a classe "ativo", aparece */
+  }
+}
