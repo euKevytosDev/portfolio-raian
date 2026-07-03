@@ -1,0 +1,85 @@
+/*
+  ============================================
+  ESTILOS PRINCIPAIS — layout e aparência
+  ============================================
+
+  Este arquivo importa as variáveis e aplica os estilos.
+  Na Etapa 0, deixamos só o básico. Cada etapa seguinte
+  adiciona mais estilo (Hero, cards, menu mobile, etc.).
+*/
+
+/* Importa as variáveis de cores, fontes e espaçamentos */
+@import url("variaveis.css");
+
+/* Reset simples: remove margens/paddings padrão do navegador */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* scroll suave ao clicar nos links do menu (funciona sem JS!) */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-size: var(--tamanho-texto);
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6; /* espaço entre linhas — melhora leitura */
+}
+
+/* Container centralizado — limita a largura em telas grandes */
+.container {
+  width: 90%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto; /* centraliza horizontalmente */
+}
+
+/* Títulos de seção (ex: "Projetos", "Sobre mim") */
+.titulo-secao {
+  font-family: var(--fonte-titulo);
+  font-size: var(--tamanho-subtitulo);
+  color: var(--cor-destaque);
+  margin-bottom: var(--espacamento-grande);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Cada seção ocupa a altura mínima da tela (efeito "página inteira") */
+section {
+  padding: var(--espacamento-secao) 0;
+  min-height: 100vh; /* 100% da altura da janela */
+  display: flex;
+  align-items: center; /* centraliza o conteúdo verticalmente */
+}
+
+/* Botão de destaque (usado no Hero e Contato) */
+.btn {
+  display: inline-block;
+  padding: var(--espacamento-medio) var(--espacamento-grande);
+  background-color: var(--cor-destaque);
+  color: #fff;
+  text-decoration: none;
+  border-radius: var(--borda-arredondada);
+  font-weight: 600;
+  transition: background-color var(--transicao-rapida);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+/* --- Responsividade básica (celular) --- */
+@media (max-width: 768px) {
+  section {
+    min-height: auto; /* no celular, seções não precisam ocupar tela inteira */
+    padding: var(--espacamento-grande) 0;
+  }
+}

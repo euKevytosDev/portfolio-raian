@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport = essencial para o site funcionar bem no celular -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Raian Kevin — Full Stack Developer">
+  <title>Raian Kevin | Full Stack Developer</title>
+
+  <!-- Google Fonts: fonte Inter (moderna e profissional) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Nossos arquivos CSS (sempre na pasta css/) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!--
+    ============================================
+    HEADER + NAVEGAÇÃO
+    ============================================
+    O menu mobile (hambúrguer) será feito na Etapa 2 com JavaScript.
+    Por enquanto, só o HTML estático.
+  -->
+  <header class="header" id="topo">
+    <nav class="nav container">
+      <a href="#topo" class="nav-logo">RK</a>
+
+      <!-- Botão hambúrguer — invisível no desktop, visível no celular (CSS depois) -->
+      <button class="nav-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-lista" id="nav-lista">
+        <li><a href="#projetos" class="nav-link">Projetos</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--
+      ============================================
+      HERO — primeira impressão
+      ============================================
+      Etapa 1: estilizamos e adicionamos o primeiro JS (botão contato).
+    -->
+    <section id="hero" class="hero">
+      <div class="container">
+        <p class="hero-saudacao">Olá, eu me chamo</p>
+        <h1 class="hero-nome">Raian Kevin</h1>
+        <p class="hero-cargo">Full Stack Developer</p>
+        <p class="hero-descricao">
+          Estudante de ADS apaixonado por criar experiências na web.
+          Forte em HTML e CSS, aprendendo JavaScript na prática.
+        </p>
+        <a href="#contato" class="btn">Entrar em contato</a>
+      </div>
+    </section>
+
+    <!--
+      ============================================
+      PROJETOS
+      ============================================
+      Etapa 3: os cards serão gerados com JavaScript (forEach + array).
+    -->
+    <section id="projetos">
+      <div class="container">
+        <h2 class="titulo-secao">Projetos</h2>
+        <div class="projetos-grid" id="projetos-grid">
+          <!-- Os cards entram aqui via JS na Etapa 3 -->
+          <p class="placeholder">Em breve: cards dos projetos gerados com JavaScript 🚀</p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ============================================
+      SOBRE MIM
+      ============================================
+    -->
+    <section id="sobre">
+      <div class="container">
+        <h2 class="titulo-secao">Sobre mim</h2>
+        <div class="sobre-conteudo">
+          <p>
+            Tenho 21 anos, curso Análise e Desenvolvimento de Sistemas (4º semestre)
+            e estou construindo minha carreira como desenvolvedor Full Stack.
+          </p>
+          <p>
+            Já desenvolvi um site de casamento completo (HTML, CSS e JS),
+            publiquei no GitHub Pages e tenho um backend em Spring Boot + PostgreSQL
+            hospedado na Render.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ============================================
+      SKILLS / TECNOLOGIAS
+      ============================================
+    -->
+    <section id="skills">
+      <div class="container">
+        <h2 class="titulo-secao">Skills</h2>
+        <ul class="skills-lista">
+          <li class="skill-item">HTML</li>
+          <li class="skill-item">CSS</li>
+          <li class="skill-item">JavaScript</li>
+          <li class="skill-item">Java</li>
+          <li class="skill-item">Spring Boot</li>
+          <li class="skill-item">PostgreSQL</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--
+      ============================================
+      CONTATO
+      ============================================
+      Etapa 5: validação e interações com JavaScript.
+    -->
+    <section id="contato">
+      <div class="container">
+        <h2 class="titulo-secao">Contato</h2>
+        <p class="contato-texto">Vamos conversar? Me chama em qualquer rede:</p>
+        <div class="contato-links">
+          <!-- Troque os # pelos seus links reais quando quiser -->
+          <a href="#" class="contato-link" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="#" class="contato-link" target="_blank" rel="noopener">GitHub</a>
+          <a href="#" class="contato-link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:seu@email.com" class="contato-link">Email</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Raian Kevin. Feito com HTML, CSS e JavaScript.</p>
+    </div>
+  </footer>
+
+  <!--
+    JavaScript fica SEMPRE no final do body.
+    Por quê? O HTML precisa carregar antes do JS "enxergar" os elementos.
+    Na Etapa 1, vamos escrever nosso primeiro código aqui!
+  -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
