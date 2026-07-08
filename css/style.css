@@ -264,6 +264,47 @@ section {
   text-decoration: none;
 }
 
+.projeto-detalhe {
+  padding: var(--espacamento-secao) 0;
+  min-height: 80vh;
+}
+
+.projeto-detalhe h1 {
+  font-size: var(--tamanho-titulo);
+  margin-bottom: var(--espacamento-grande);
+}
+
+#projeto-imagem {
+  width: 100%;
+  max-width: 800px;
+  border-radius: var(--borda-arredondada);
+  margin-bottom: var(--espacamento-grande);
+  background-color: var(--cor-fundo-card);
+  min-height: 200px;
+  object-fit: cover;
+}
+
+#projeto-descricao {
+  color: var(--cor-texto-suave);
+  max-width: 600px;
+  margin-bottom: var(--espacamento-grande);
+}
+
+#projeto-tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacamento-medio);
+  list-style: none;
+  margin-bottom: var(--espacamento-grande);
+}
+
+#projeto-tecnologias li {
+  background-color: var(--cor-fundo-card);
+  padding: var(--espacamento-pequeno) var(--espacamento-medio);
+  border-radius: var(--borda-arredondada);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
 
 /* --- No celular --- */
 @media (max-width: 768px) {

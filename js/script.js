@@ -29,13 +29,21 @@ linksMenu.forEach(function (link) {
 // --- PROJETOS: lista de dados + geração dos cards ---
 const projetos = [
   {
+    id: "casamento",
     titulo: "Rafaella & Kevin",
     descricao: "Site de casamento completo com confirmação de presença e lista de presentes.",
+    descricaoLonga: "Texto maior explicando o projeto, o que vc fez e o que aprendeu",
+    imagem: "img/projetos/casamento.png", // eu vou por deps 
+    tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot"],
     link: "https://eukevytosdev.github.io/site-casamento/"
   },
   {
+    id: "padaria-lider",
     titulo: "Padaria Líder",
     descricao: "Landing page mobile-first com vitrine e contato via WhatsApp.",
+    descricaoLonga: "Texto maior explicando o projeto, o que vc fez e o que aprendeu",
+    imagem: "img/projetos/casamento.png", // eu vou por deps 
+    tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot"],
     link: "https://eukevytosdev.github.io/padaria-esquina-landing/"
   }
 ];
@@ -47,7 +55,7 @@ projetos.forEach(function (projeto) {
     <div class="projeto-card">
       <h3>${projeto.titulo}</h3>
       <p>${projeto.descricao}</p>
-      <a href="${projeto.link}" target="_blank" rel="noopener">Ver projeto</a>
+      <a href="projeto.html?id=${projeto.id}">Ver projeto</a>
     </div>
   `;
   grid.innerHTML += card;
