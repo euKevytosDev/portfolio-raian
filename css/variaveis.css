@@ -8,6 +8,7 @@
   /* --- Cores principais (paleta inspirada no ryandev.com.br) --- */
   --cor-fundo: #000032;                        /* fundo geral (navy) */
   --cor-fundo-hero: #4946ff;                   /* só o Hero */
+  --cor-hero-blob-claro: #5c5cb8;              /* camada suave do blob no Hero */
   --cor-fundo-card: rgba(0, 0, 50, 0.65);      /* cards */
   --cor-texto: #ffffff;
   --cor-texto-suave: #94a3b8;
