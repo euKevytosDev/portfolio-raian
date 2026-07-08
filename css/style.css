@@ -131,23 +131,49 @@ section {
 
 .projeto-card {
   background-color: var(--cor-fundo-card);
-  padding: var(--espacamento-grande);
   border-radius: var(--borda-arredondada);
+  overflow: hidden; /* cantos da imagem acompanham o card */
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transicao-rapida);
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+}
+
+.projeto-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* corta sem esticar — serve pra print celular ou desktop */
+  background-color: #252525; /* placeholder enquanto não tem a imagem */
+  display: block;
+}
+
+.projeto-card h3,
+.projeto-card p,
+.projeto-card a {
+  padding-left: var(--espacamento-grande);
+  padding-right: var(--espacamento-grande);
 }
 
 .projeto-card h3 {
+  margin-top: var(--espacamento-medio);
   margin-bottom: var(--espacamento-pequeno);
 }
 
 .projeto-card p {
   color: var(--cor-texto-suave);
   margin-bottom: var(--espacamento-medio);
+  flex-grow: 1; /* empurra o link pro rodapé do card */
 }
 
 .projeto-card a {
   color: var(--cor-destaque);
   text-decoration: none;
   font-weight: 600;
+  padding-bottom: var(--espacamento-grande);
+  display: inline-block;
 }
 
 .projeto-card a:hover {
