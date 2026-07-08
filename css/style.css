@@ -291,29 +291,38 @@ section {
 }
 
 .projeto-detalhe {
-  padding: var(--espacamento-secao) 0;
-  min-height: 80vh;
+  padding: var(--espacamento-grande) 0 var(--espacamento-secao);
+  min-height: auto;
+  max-width: 720px; /* coluna mais estreita e legível */
+}
+
+.pagina-projeto .header .container,
+.pagina-projeto .projeto-detalhe {
+  max-width: 720px; /* alinha "Voltar" com o título */
 }
 
 .projeto-detalhe h1 {
   font-size: var(--tamanho-titulo);
-  margin-bottom: var(--espacamento-grande);
+  margin-bottom: var(--espacamento-medio);
+  line-height: 1.2;
 }
 
 #projeto-imagem {
   width: 100%;
-  max-width: 800px;
+  max-width: 100%;
   border-radius: var(--borda-arredondada);
   margin-bottom: var(--espacamento-grande);
   background-color: var(--cor-fundo-card);
   min-height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 #projeto-descricao {
   color: var(--cor-texto-suave);
-  max-width: 600px;
+  max-width: 100%;
   margin-bottom: var(--espacamento-grande);
+  line-height: 1.7;
 }
 
 #projeto-tecnologias {
