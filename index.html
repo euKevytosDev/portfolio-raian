@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <!-- viewport = essencial para o site funcionar bem no celular -->
@@ -10,7 +11,9 @@
   <!-- Google Fonts: Inter (textos) + Nunito Sans (nome do Hero, igual ao ryandev) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <!-- Nossos arquivos CSS (sempre na pasta css/) -->
   <link rel="stylesheet" href="css/style.css">
@@ -32,7 +35,7 @@
       <!-- Botão hambúrguer — invisível no desktop, visível no celular (CSS depois) -->
       <button class="nav-toggle" id="menu-toggle" aria-label="Abrir menu">
         <span></span>
-        <span></span> 
+        <span></span>
         <span></span>
       </button>
 
@@ -54,15 +57,21 @@
       Etapa 1: estilizamos e adicionamos o primeiro JS (botão contato).
     -->
     <section id="hero" class="hero">
-      <div class="container">
-        <p class="hero-saudacao">Olá, eu me chamo</p>
-        <h1 class="hero-nome">Raian Kevin</h1>
-        <p class="hero-cargo">Full Stack Developer</p>
-        <p class="hero-descricao">
-          Estudante de ADS apaixonado por criar na web. Forte em HTML e CSS,
-          construindo projetos reais com JavaScript, Java e Spring Boot.
-        </p>
-        <a href="#contato" class="btn">Entrar em contato</a>
+      <div class="container hero-conteudo">
+
+        <div class="hero-texto">
+          <p class="hero-saudacao">Olá, eu me chamo</p>
+          <h1 class="hero-nome">Raian Kevin</h1>
+          <p class="hero-cargo">Full Stack Developer</p>
+          <p class="hero-descricao">
+            Estudante de ADS apaixonado por criar na web. Forte em HTML e CSS,
+            construindo projetos reais com JavaScript, Java e Spring Boot.
+          </p>
+          <a href="#contato" class="btn">Entrar em contato</a>
+        </div>
+
+        <img src="img/perfil/Boy_1-Cd35LwGF.png" alt="Ilustração de Raian Kevin" class="hero-garoto">
+
       </div>
     </section>
 
@@ -133,9 +142,11 @@
         <h2 class="titulo-secao">Contato</h2>
         <p class="contato-texto">Vamos conversar? Me chama em qualquer rede:</p>
         <div class="contato-links">
-          <a href="https://wa.me/5531991141208?text=Ol%C3%A1%20Raian%2C%20vi%20seu%20portf%C3%B3lio!" class="contato-link" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://wa.me/5531991141208?text=Ol%C3%A1%20Raian%2C%20vi%20seu%20portf%C3%B3lio!"
+            class="contato-link" target="_blank" rel="noopener">WhatsApp</a>
           <a href="https://github.com/euKevytosDev" class="contato-link" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/raian-kevin-887487342/" class="contato-link" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/raian-kevin-887487342/" class="contato-link" target="_blank"
+            rel="noopener">LinkedIn</a>
           <a href="mailto:raiankevin18@gmail.com" class="contato-link">Email</a>
         </div>
       </div>
@@ -157,4 +168,5 @@
   <script src="js/script.js"></script>
 
 </body>
+
 </html>

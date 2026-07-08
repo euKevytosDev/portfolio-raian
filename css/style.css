@@ -38,6 +38,23 @@ body {
    text-align: left;
 }
 
+.hero-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacamento-grande);
+}
+
+.hero-texto {
+  flex: 1;
+}
+
+.hero-garoto {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+}
+
 /* Container centralizado — limita a largura em telas grandes */
 .container {
   width: 90%;
@@ -69,7 +86,7 @@ section {
   display: inline-block;
   padding: var(--espacamento-medio) var(--espacamento-grande);
   background-color: var(--cor-destaque);
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   border-radius: var(--borda-arredondada);
   font-weight: 600;
@@ -80,36 +97,6 @@ section {
 
 .btn:hover {
   background-color: var(--cor-destaque-hover);
-}
-
-/* --- Responsividade básica (celular) --- */
-@media (max-width: 768px) {
-  section {
-    min-height: auto;
-    padding: var(--espacamento-grande) 0;
-  }
-
-  .hero-saudacao {
-    font-size: var(--tamanho-hero-saudacao-mobile);
-    text-align: center;
-  }
-
-  .hero-nome {
-    font-size: var(--tamanho-hero-nome-mobile);
-    text-align: center;
-  }
-
-  .hero-cargo {
-    font-size: var(--tamanho-hero-cargo-mobile);
-    text-align: center;
-  }
-
-  .hero-descricao {
-    font-size: var(--tamanho-hero-descricao-mobile);
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 .hero-saudacao {
@@ -245,17 +232,31 @@ section {
 
 .nav-lista {
   display: flex;
-  gap: var(--espacamento-medio); /* espaço entre os links */
+  gap: var(--espacamento-grande); /* espaço entre os links */
   list-style: none; /* tira as bolinhas da lista */
 }
 
 .nav-link {
-  color: var(--cor-texto);
+  font-size: var(--tamanho-subtitulo);
   text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  /* gradiente com 2 metades: laranja | branco */
+  background: linear-gradient(
+    to right,
+    var(--cor-destaque) 50%,
+    var(--cor-texto) 50%
+  );
+  background-size: 200% 100%;      /* gradiente 2x maior que o link */
+  background-position: right;      /* mostra a metade branca */
+  -webkit-background-clip: text;   /* recorta o gradiente no formato das letras */
+  background-clip: text;
+  color: transparent;              /* deixa o gradiente aparecer */
+  transition: background-position 0.6s ease;
 }
 
 .nav-link:hover {
-  color: var(--cor-destaque);
+  background-position: left;       /* puxa o laranja da esquerda */
 }
 
 /* Hambúrguer escondido no desktop */
@@ -374,23 +375,58 @@ section {
   background-color: var(--cor-fundo-card);
   padding: var(--espacamento-pequeno) var(--espacamento-medio);
   border-radius: var(--borda-arredondada);
-  border: var(--cor-borda);
+  border: 1px solid var(--cor-borda);
 }
 
 
-/* --- No celular --- */
+/* --- Celular (um único @media para tudo) --- */
 @media (max-width: 768px) {
+  section {
+    min-height: auto;
+    padding: var(--espacamento-grande) 0;
+  }
+
+  .hero-conteudo {
+    flex-direction: column;
+  }
+
+  .hero-garoto {
+    display: none;
+  }
+
+  .hero-saudacao {
+    font-size: var(--tamanho-hero-saudacao-mobile);
+    text-align: center;
+  }
+
+  .hero-nome {
+    font-size: var(--tamanho-hero-nome-mobile);
+    text-align: center;
+  }
+
+  .hero-cargo {
+    font-size: var(--tamanho-hero-cargo-mobile);
+    text-align: center;
+  }
+
+  .hero-descricao {
+    font-size: var(--tamanho-hero-descricao-mobile);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .nav-toggle {
-    display: block; /* mostra o ☰ */
+    display: block;
   }
 
   .nav-lista {
-    display: none; /* esconde o menu por padrão */
-    flex-direction: column; /* links empilhados */
+    display: none;
+    flex-direction: column;
     width: 100%;
   }
 
   .nav-lista.ativo {
-    display: flex; /* quando tem a classe "ativo", aparece */
+    display: flex;
   }
 }
