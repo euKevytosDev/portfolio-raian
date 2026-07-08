@@ -29,8 +29,13 @@ body {
   font-family: var(--fonte-principal);
   font-size: var(--tamanho-texto);
   color: var(--cor-texto);
-  background-color: var(--cor-fundo);
+  background-color: var(--cor-fundo); /* navy escuro */
   line-height: 1.6; /* espaço entre linhas — melhora leitura */
+}
+
+.hero {
+  background-color: var(--cor-fundo-hero); /* azul só no Hero */
+   text-align: left;
 }
 
 /* Container centralizado — limita a largura em telas grandes */
@@ -80,35 +85,67 @@ section {
 /* --- Responsividade básica (celular) --- */
 @media (max-width: 768px) {
   section {
-    min-height: auto; /* no celular, seções não precisam ocupar tela inteira */
+    min-height: auto;
     padding: var(--espacamento-grande) 0;
+  }
+
+  .hero-saudacao {
+    font-size: var(--tamanho-hero-saudacao-mobile);
+    text-align: center;
+  }
+
+  .hero-nome {
+    font-size: var(--tamanho-hero-nome-mobile);
+    text-align: center;
+  }
+
+  .hero-cargo {
+    font-size: var(--tamanho-hero-cargo-mobile);
+    text-align: center;
+  }
+
+  .hero-descricao {
+    font-size: var(--tamanho-hero-descricao-mobile);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-.hero {
-  text-align: left;
-}
-
 .hero-saudacao {
-  font-size: var(--tamanho-texto);
-  color: var(--cor-texto-suave);
-  margin-bottom: var(--espacamento-pequeno);
+  font-family: var(--fonte-display);
+  font-size: var(--tamanho-hero-saudacao);
+  font-weight: 800;
+  color: var(--cor-texto);
+  margin-bottom: 0.9375rem;
 }
 
 .hero-nome {
-  font-size: var(--tamanho-titulo);
-  color: var(--cor-texto);
-  margin-bottom: var(--espacamento-pequeno);
+  font-family: var(--fonte-display);
+  font-size: var(--tamanho-hero-nome);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--cor-fundo);
+  margin-bottom: 2.125rem;
 }
 
 .hero-cargo {
+  font-family: var(--fonte-display);
+  font-size: var(--tamanho-hero-cargo);
+  font-weight: 900;
+  line-height: 1.1;
   color: var(--cor-destaque);
-  margin-bottom: var(--espacamento-medio);
+  margin-bottom: 1.25rem;
 }
 
 .hero-descricao {
-  max-width: 500px;
-  color: var(--cor-texto-suave);
+  max-width: 32rem;
+  font-size: var(--tamanho-hero-descricao);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--cor-texto);
+  opacity: 0.75;
   margin-bottom: var(--espacamento-grande);
 }
 
@@ -118,7 +155,7 @@ section {
   background-color: var(--cor-fundo);
   z-index: 100;
   padding: var(--espacamento-medio) 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--cor-borda);
 }
 
 /* abaxo o css do grid para o projetos */
@@ -247,7 +284,7 @@ section {
   color: var(--cor-texto);
   padding: var(--espacamento-pequeno) var(--espacamento-medio);
   border-radius: var(--borda-arredondada);
-  border: 1px solid rgba(108, 99, 255, 0.3);
+  border: 1px solid var(--cor-borda);
 }
 
 .contato-texto {
@@ -337,7 +374,7 @@ section {
   background-color: var(--cor-fundo-card);
   padding: var(--espacamento-pequeno) var(--espacamento-medio);
   border-radius: var(--borda-arredondada);
-  border: 1px solid rgba(108, 99, 255, 0.3);
+  border: var(--cor-borda);
 }
 
 

@@ -2,40 +2,50 @@
   ============================================
   VARIÁVEIS CSS — o "painel de controle" visual
   ============================================
-
-  Por que usar variáveis?
-  - Você define a cor UMA vez e reutiliza em todo o site.
-  - Quer mudar a cor principal? Altera só aqui.
-  - É o mesmo conceito de "constante" que você vai ver em JavaScript depois.
 */
 
 :root {
-  /* --- Cores principais --- */
-  --cor-fundo: #0f0f0f;           /* fundo escuro do site (estilo profissional) */
-  --cor-fundo-card: #1a1a1a;      /* fundo dos cards (projetos, skills) */
-  --cor-texto: #e8e8e8;           /* texto principal (quase branco) */
-  --cor-texto-suave: #a0a0a0;     /* textos secundários, descrições */
-  --cor-destaque: #6c63ff;        /* roxo — cor de destaque (botões, links) */
-  --cor-destaque-hover: #5a52d5;  /* roxo mais escuro ao passar o mouse */
+  /* --- Cores principais (paleta inspirada no ryandev.com.br) --- */
+  --cor-fundo: #000032;                        /* fundo geral (navy) */
+  --cor-fundo-hero: #4946ff;                   /* só o Hero */
+  --cor-fundo-card: rgba(0, 0, 50, 0.65);      /* cards */
+  --cor-texto: #ffffff;
+  --cor-texto-suave: #94a3b8;
+  --cor-destaque: #ff8645;                     /* laranja */
+  --cor-destaque-hover: #e6753a;
+  --cor-borda: rgba(255, 255, 255, 0.08);
 
   /* --- Fontes --- */
   --fonte-principal: "Inter", "Segoe UI", system-ui, sans-serif;
   --fonte-titulo: "Inter", "Segoe UI", system-ui, sans-serif;
+  /* Nome grande do Hero — mesma família do ryandev.com.br */
+  --fonte-display: "Nunito Sans", "Inter", sans-serif;
 
-  /* --- Tamanhos de fonte --- */
-  --tamanho-texto: 1rem;          /* 16px — texto normal */
-  --tamanho-subtitulo: 1.25rem;   /* 20px */
-  --tamanho-titulo: 2.5rem;       /* 40px — título do Hero */
-  --tamanho-titulo-mobile: 1.75rem; /* menor no celular */
+  /* --- Tamanhos gerais --- */
+  --tamanho-texto: 1rem;              /* 16px */
+  --tamanho-subtitulo: 1.25rem;       /* 20px — títulos de seção */
+  --tamanho-titulo: 2.5rem;           /* 40px — uso geral */
 
-  /* --- Espaçamentos (padding/margin) --- */
-  --espacamento-pequeno: 0.5rem;  /* 8px */
-  --espacamento-medio: 1rem;      /* 16px */
-  --espacamento-grande: 2rem;     /* 32px */
-  --espacamento-secao: 5rem;      /* espaço entre seções */
+  /* --- Tamanhos do Hero (baseados no ryandev: 35 / 85 / 45 / 29 px) --- */
+  --tamanho-hero-saudacao: 2.1875rem;   /* 35px */
+  --tamanho-hero-nome: 5.3125rem;       /* 85px */
+  --tamanho-hero-cargo: 2.8125rem;      /* 45px */
+  --tamanho-hero-descricao: 1.8125rem;  /* 29px */
+
+  /* --- Tamanhos do Hero no celular --- */
+  --tamanho-hero-saudacao-mobile: 1.125rem;
+  --tamanho-hero-nome-mobile: 2.75rem;
+  --tamanho-hero-cargo-mobile: 1.75rem;
+  --tamanho-hero-descricao-mobile: 1.125rem;
+
+  /* --- Espaçamentos --- */
+  --espacamento-pequeno: 0.5rem;
+  --espacamento-medio: 1rem;
+  --espacamento-grande: 2rem;
+  --espacamento-secao: 5rem;
 
   /* --- Outros --- */
-  --largura-maxima: 1100px;       /* largura máxima do conteúdo centralizado */
-  --borda-arredondada: 12px;      /* cantos arredondados dos cards */
-  --transicao-rapida: 0.3s ease;  /* animação suave ao passar o mouse */
+  --largura-maxima: 1100px;
+  --borda-arredondada: 12px;
+  --transicao-rapida: 0.3s ease;
 }
