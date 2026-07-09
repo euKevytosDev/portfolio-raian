@@ -21,8 +21,13 @@
 }
 
 html {
-  /* scroll suave ao clicar nos links do menu (funciona sem JS!) */
   scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox — esconde barra, scroll continua */
+  -ms-overflow-style: none; /* IE / Edge antigo */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 body {
@@ -31,6 +36,12 @@ body {
   color: var(--cor-texto);
   background-color: var(--cor-fundo-hero);
   line-height: 1.6;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .hero {
