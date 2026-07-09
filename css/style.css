@@ -374,9 +374,57 @@ section {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-  background:
-    linear-gradient(135deg, rgba(73, 70, 255, 0.09) 0%, transparent 45%),
-    var(--cor-fundo);
+  background-color: var(--cor-fundo);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(73, 70, 255, 0.1) 0%, transparent 42%),
+    linear-gradient(315deg, rgba(91, 91, 183, 0.06) 0%, transparent 38%);
+  background-size: 28px 28px, 100% 100%, 100% 100%;
+  background-position: center, 0 0, 100% 100%;
+}
+
+/* Orbes suaves — decoração sem competir com os cards */
+.projetos-decoracao {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.projetos-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+}
+
+.projetos-orb--1 {
+  width:  min(22rem, 55vw);
+  height: min(22rem, 55vw);
+  top: 8%;
+  left: -6%;
+  background: rgba(91, 91, 183, 0.28);
+}
+
+.projetos-orb--2 {
+  width:  min(16rem, 40vw);
+  height: min(16rem, 40vw);
+  bottom: 12%;
+  right: -4%;
+  background: rgba(73, 70, 255, 0.18);
+}
+
+.projetos-orb--3 {
+  width:  min(9rem, 24vw);
+  height: min(9rem, 24vw);
+  top: 48%;
+  right: 18%;
+  background: rgba(255, 134, 69, 0.07);
+}
+
+.projetos-conteudo {
+  position: relative;
+  z-index: 1;
 }
 
 .projetos-cabecalho {
@@ -649,21 +697,44 @@ section {
 
 /* --- Celular (um único @media para tudo) --- */
 @media (max-width: 768px) {
+  .container {
+    width: 92%;
+  }
+
   section {
     min-height: auto;
     padding: var(--espacamento-grande) 0;
   }
 
-  .hero-conteudo {
-    grid-template-columns: 1fr;
+  /* Hero limpo no celular — sem blob nem avatar */
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
   }
 
-  .hero-blob {
-    opacity: 0.75;
+  .hero-fundo {
+    display: none;
+  }
+
+  .hero-conteudo {
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+    width: 100%;
+  }
+
+  .hero-conteudo.container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .hero-texto {
     max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-texto > * {
+    animation-name: entrar-suave;
   }
 
   .hero-garoto {
@@ -673,12 +744,21 @@ section {
   .hero-visual {
     transform: none;
     animation: entrar-suave 0.7s ease both;
-    animation-delay: 0.2s;
+    animation-delay: 0.55s;
     justify-content: center;
+    width: 100%;
   }
 
-  .hero-texto > * {
-    animation-name: entrar-suave;
+  .icones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.35rem;
+    width: 100%;
+  }
+
+  .icones svg {
+    width: 44px;
+    height: 44px;
   }
 
   .hero-saudacao {
@@ -701,6 +781,60 @@ section {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .hero-texto .btn {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  /* Projetos — fundo mais rico, cards em destaque */
+  .projetos {
+    background-size: 22px 22px, 100% 100%, 100% 100%;
+  }
+
+  .projetos-orb--1 {
+    width: 14rem;
+    height: 14rem;
+    top: 4%;
+    left: -18%;
+  }
+
+  .projetos-orb--2 {
+    width: 11rem;
+    height: 11rem;
+    bottom: 8%;
+    right: -12%;
+  }
+
+  .projetos-orb--3 {
+    display: none;
+  }
+
+  .projetos-cabecalho {
+    text-align: center;
+  }
+
+  .projetos-subtitulo {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+  }
+
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: var(--espacamento-medio);
+  }
+
+  .projeto-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .projeto-card:hover .projeto-card-img {
+    transform: none;
   }
 
   .nav-toggle {
