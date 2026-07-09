@@ -49,4 +49,10 @@
   --largura-maxima: 1100px;
   --borda-arredondada: 12px;
   --transicao-rapida: 0.3s ease;
+
+  /* Ajuste fino do SVG de fundo no Hero (mostra a forma inteira) */
+  --hero-blob-altura: 100%;
+  --hero-blob-largura-max: 62%;
+  --hero-blob-pos-direita: 0;
+  --hero-blob-pos-top: 0;
 }

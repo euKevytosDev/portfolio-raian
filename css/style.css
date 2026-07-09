@@ -29,9 +29,8 @@ body {
   font-family: var(--fonte-principal);
   font-size: var(--tamanho-texto);
   color: var(--cor-texto);
-  background-color: var(--cor-fundo);
+  background-color: var(--cor-fundo-hero);
   line-height: 1.6;
-  /* espaço entre linhas — melhora leitura */
 }
 
 .hero {
@@ -51,9 +50,11 @@ body {
 
 .hero-blob {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: var(--hero-blob-pos-top);
+  right: var(--hero-blob-pos-direita);
+  height: var(--hero-blob-altura);
+  width: auto;
+  max-width: var(--hero-blob-largura-max);
   display: block;
 }
 
