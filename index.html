@@ -141,8 +141,20 @@
       ============================================
       Etapa 3: os cards serão gerados com JavaScript (forEach + array).
     -->
-    <section id="projetos">
-      <div class="container">
+    <section id="projetos" class="projetos">
+      <div class="projetos-fundo" aria-hidden="true">
+        <svg class="projetos-blob" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice">
+          <path
+            d="M731 600L663.8 585.7C596.7 571.3 462.3 542.7 422.7 514.2C383 485.7 438 457.3 474.7 428.8C511.3 400.3 529.7 371.7 500.7 343C471.7 314.3 395.3 285.7 382.3 257C369.3 228.3 419.7 199.7 408.3 171.2C397 142.7 324 114.3 359.3 85.8C394.7 57.3 538.3 28.7 610.2 14.3L682 0L900 0L900 600Z"
+            fill="var(--cor-hero-blob-claro)" />
+          <path
+            d="M733 600L702 585.7C671 571.3 609 542.7 605 514.2C601 485.7 655 457.3 697.8 428.8C740.7 400.3 772.3 371.7 752 343C731.7 314.3 659.3 285.7 652.3 257C645.3 228.3 703.7 199.7 721.3 171.2C739 142.7 716 114.3 674.5 85.8C633 57.3 573 28.7 543 14.3L513 0L900 0L900 600Z"
+            fill="var(--cor-fundo)" />
+        </svg>
+      </div>
+
+      <div class="container projetos-conteudo">
         <h2 class="titulo-secao">Projetos</h2>
         <div class="projetos-grid" id="projetos-grid">
           <!-- Cards gerados pelo JavaScript -->
