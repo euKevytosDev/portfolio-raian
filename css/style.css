@@ -44,6 +44,83 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* --- Animações de entrada (ao abrir a página) --- */
+@keyframes entrar-suave {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrar-da-esquerda {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entrar-da-direita {
+  from {
+    opacity: 0;
+    transform: translateX(calc(36px + var(--hero-visual-deslocamento-x)));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(var(--hero-visual-deslocamento-x));
+  }
+}
+
+@keyframes blob-deslizar {
+  from {
+    opacity: 0;
+    transform: translateX(48px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes header-aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .hero-blob,
+  .hero-texto > *,
+  .hero-visual,
+  .icones a {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .hero-visual {
+    transform: translateX(var(--hero-visual-deslocamento-x)) !important;
+  }
+}
+
 .hero {
   background-color: var(--cor-fundo-hero);
   text-align: left;
@@ -67,6 +144,7 @@ body::-webkit-scrollbar {
   width: auto;
   max-width: var(--hero-blob-largura-max);
   display: block;
+  animation: blob-deslizar 1s var(--animacao-entrada) 0.1s both;
 }
 
 .hero-conteudo {
@@ -90,6 +168,31 @@ body::-webkit-scrollbar {
   max-width: 36rem;
 }
 
+.hero-texto > * {
+  opacity: 0;
+  animation: entrar-da-esquerda var(--animacao-entrada) both;
+}
+
+.hero-saudacao {
+  animation-delay: 0.15s;
+}
+
+.hero-nome {
+  animation-delay: 0.28s;
+}
+
+.hero-cargo {
+  animation-delay: 0.4s;
+}
+
+.hero-descricao {
+  animation-delay: 0.52s;
+}
+
+.hero-texto .btn {
+  animation-delay: 0.64s;
+}
+
 .hero-texto a {
   font-size: var(--tamanho-subtitulo);
   font-weight: bold;
@@ -100,6 +203,8 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: var(--espacamento-medio);
+  transform: translateX(var(--hero-visual-deslocamento-x));
+  animation: entrar-da-direita 1s var(--animacao-entrada) 0.32s both;
 }
 
 .hero-garoto {
@@ -124,8 +229,22 @@ body::-webkit-scrollbar {
 
 /* Cada <a> envolve um SVG — vira a área clicável do ícone */
 .icones a {
-  display: inline-flex; /* encaixa o SVG sem espaço extra embaixo */
-  line-height: 0; /* remove “folga” de texto que empurra o SVG */
+  display: inline-flex;
+  line-height: 0;
+  opacity: 0;
+  animation: entrar-suave 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.icones a:nth-child(1) {
+  animation-delay: 0.7s;
+}
+
+.icones a:nth-child(2) {
+  animation-delay: 0.82s;
+}
+
+.icones a:nth-child(3) {
+  animation-delay: 0.94s;
 }
 
 /* Estado normal do ícone (repouso) */
@@ -246,6 +365,7 @@ section {
   z-index: 100;
   padding: var(--espacamento-medio) 0;
   border-bottom: 1px solid var(--cor-borda);
+  animation: header-aparecer 0.65s ease both;
 }
 
 /* --- Seção Projetos --- */
@@ -548,6 +668,17 @@ section {
 
   .hero-garoto {
     display: none;
+  }
+
+  .hero-visual {
+    transform: none;
+    animation: entrar-suave 0.7s ease both;
+    animation-delay: 0.2s;
+    justify-content: center;
+  }
+
+  .hero-texto > * {
+    animation-name: entrar-suave;
   }
 
   .hero-saudacao {
