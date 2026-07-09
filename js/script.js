@@ -52,12 +52,11 @@ grid.innerHTML = "";
 
 projetos.forEach(function (projeto) {
   const card = `
-    <div class="projeto-card">
-    <img src="${projeto.imagem}" alt="${projeto.titulo}" class="projeto-card-img">
+    <a class="projeto-card" href="projeto.html?id=${projeto.id}">
+      <img src="${projeto.imagem}" alt="Preview do projeto ${projeto.titulo}" class="projeto-card-img">
       <h3>${projeto.titulo}</h3>
       <p>${projeto.descricao}</p>
-      <a href="projeto.html?id=${projeto.id}">Ver projeto</a>
-    </div>
+    </a>
   `;
   grid.innerHTML += card;
 });

@@ -34,7 +34,7 @@ body {
   font-family: var(--fonte-principal);
   font-size: var(--tamanho-texto);
   color: var(--cor-texto);
-  background-color: var(--cor-fundo-hero);
+  background-color: var(--cor-fundo);
   line-height: 1.6;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -248,10 +248,26 @@ section {
   border-bottom: 1px solid var(--cor-borda);
 }
 
-/* abaxo o css do grid para o projetos */
+/* --- Seção Projetos --- */
 
 .projetos {
-  background-color: var(--cor-fundo);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    linear-gradient(135deg, rgba(73, 70, 255, 0.09) 0%, transparent 45%),
+    var(--cor-fundo);
+}
+
+.projetos-cabecalho {
+  margin-bottom: var(--espacamento-grande);
+}
+
+.projetos-subtitulo {
+  color: var(--cor-texto-suave);
+  font-size: 1.125rem;
+  max-width: 32rem;
+  margin-top: calc(var(--espacamento-pequeno) * -1);
 }
 
 .projetos-grid {
@@ -260,33 +276,49 @@ section {
   gap: var(--espacamento-grande);
 }
 
+/* Card inteiro é um link clicável */
 .projeto-card {
-  background-color: var(--cor-fundo-card);
-  border-radius: var(--borda-arredondada);
-  overflow: hidden;
-  /* cantos da imagem acompanham o card */
   display: flex;
   flex-direction: column;
-  transition: transform var(--transicao-rapida);
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--cor-fundo-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--borda-arredondada);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  transition:
+    transform var(--transicao-card),
+    box-shadow var(--transicao-card),
+    border-color var(--transicao-card);
 }
 
 .projeto-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(255, 134, 69, 0.22);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.32);
+}
+
+.projeto-card:focus-visible {
+  outline: 2px solid var(--cor-destaque);
+  outline-offset: 3px;
 }
 
 .projeto-card-img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
-  /* corta sem esticar — serve pra print celular ou desktop */
   background-color: #252525;
-  /* placeholder enquanto não tem a imagem */
   display: block;
+  transition: transform var(--transicao-card);
+}
+
+.projeto-card:hover .projeto-card-img {
+  transform: scale(1.03);
 }
 
 .projeto-card h3,
-.projeto-card p,
-.projeto-card a {
+.projeto-card p {
   padding-left: var(--espacamento-grande);
   padding-right: var(--espacamento-grande);
 }
@@ -294,25 +326,15 @@ section {
 .projeto-card h3 {
   margin-top: var(--espacamento-medio);
   margin-bottom: var(--espacamento-pequeno);
+  font-size: 1.25rem;
+  color: var(--cor-texto);
 }
 
 .projeto-card p {
   color: var(--cor-texto-suave);
-  margin-bottom: var(--espacamento-medio);
+  margin-bottom: var(--espacamento-grande);
   flex-grow: 1;
-  /* empurra o link pro rodapé do card */
-}
-
-.projeto-card a {
-  color: var(--cor-destaque);
-  text-decoration: none;
-  font-weight: 600;
-  padding-bottom: var(--espacamento-grande);
-  display: inline-block;
-}
-
-.projeto-card a:hover {
-  color: var(--cor-destaque-hover);
+  line-height: 1.55;
 }
 
 .nav-link.ativo {
