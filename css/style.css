@@ -29,8 +29,10 @@ body {
   font-family: var(--fonte-principal);
   font-size: var(--tamanho-texto);
   color: var(--cor-texto);
-  background-color: var(--cor-fundo); /* navy escuro */
-  line-height: 1.6; /* espaço entre linhas — melhora leitura */
+  background-color: var(--cor-fundo);
+  /* navy escuro */
+  line-height: 1.6;
+  /* espaço entre linhas — melhora leitura */
 }
 
 .hero {
@@ -72,17 +74,64 @@ body {
 
 .hero-garoto {
   flex-shrink: 0;
-  max-width: 340px;
+  max-width: 320px;
   width: 100%;
   height: auto;
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.28));
+}
+
+/* ============================================
+   ÍCONES SOCIAIS DO HERO (GitHub, LinkedIn, etc.)
+   ============================================ */
+
+/* Container: empilha os ícones em coluna com espaço entre eles */
+.icones {
+  display: flex; /* ativa flexbox */
+  flex-direction: column; /* um ícone embaixo do outro */
+  align-items: center; /* centraliza na horizontal */
+  gap: var(--espacamento-medio); /* ~1rem entre cada ícone */
+}
+
+/* Cada <a> envolve um SVG — vira a área clicável do ícone */
+.icones a {
+  display: inline-flex; /* encaixa o SVG sem espaço extra embaixo */
+  line-height: 0; /* remove “folga” de texto que empurra o SVG */
+}
+
+/* Estado normal do ícone (repouso) */
+.icones svg {
+  width: 50px; /* tamanho fixo do ícone */
+  height: 50px;
+  fill: var(--cor-destaque); /* cor do desenho SVG (laranja) */
+
+  /* Posição inicial explícita — a animação de volta ao normal fica suave */
+  transform: translateY(0) rotate(0deg);
+  /* Gira em torno da base, como se o ícone estivesse “apoiado” embaixo */
+  transform-origin: center bottom;
+
+  /* Sem sombra no repouso (transparente = invisível) */
+  filter: drop-shadow(0 0 0 transparent);
+
+  /* Cada propriedade com tempo/curva próprios = movimento mais natural */
+  transition:
+    fill 0.25s ease-out, /* cor muda um pouco mais rápido */
+    transform var(--transicao-icone-movimento), /* levanta + inclina com curva suave */
+    filter 0.45s ease-out; /* sombra acompanha o movimento */
+}
+
+/* Só o ícone sob o mouse reage (não todos de uma vez) */
+.icones a:hover svg {
+  fill: var(--cor-destaque-hover); /* laranja mais forte */
+  transform: translateY(-6px) rotate(-8deg); /* sobe 6px e inclina à esquerda */
+  filter: drop-shadow(0 10px 20px rgba(255, 134, 69, 0.45)); /* sombra laranja suave */
 }
 
 /* Container centralizado — limita a largura em telas grandes */
 .container {
   width: 90%;
   max-width: var(--largura-maxima);
-  margin: 0 auto; /* centraliza horizontalmente */
+  margin: 0 auto;
+  /* centraliza horizontalmente */
 }
 
 /* Títulos de seção (ex: "Projetos", "Sobre mim") */
@@ -101,7 +150,8 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  scroll-margin-top: 80px; /* compensa o header fixo ao clicar no menu */
+  scroll-margin-top: 80px;
+  /* compensa o header fixo ao clicar no menu */
 }
 
 /* Botão de destaque (usado no Hero e Contato) */
@@ -179,7 +229,8 @@ section {
 .projeto-card {
   background-color: var(--cor-fundo-card);
   border-radius: var(--borda-arredondada);
-  overflow: hidden; /* cantos da imagem acompanham o card */
+  overflow: hidden;
+  /* cantos da imagem acompanham o card */
   display: flex;
   flex-direction: column;
   transition: transform var(--transicao-rapida);
@@ -192,8 +243,10 @@ section {
 .projeto-card-img {
   width: 100%;
   height: 180px;
-  object-fit: cover; /* corta sem esticar — serve pra print celular ou desktop */
-  background-color: #252525; /* placeholder enquanto não tem a imagem */
+  object-fit: cover;
+  /* corta sem esticar — serve pra print celular ou desktop */
+  background-color: #252525;
+  /* placeholder enquanto não tem a imagem */
   display: block;
 }
 
@@ -212,7 +265,8 @@ section {
 .projeto-card p {
   color: var(--cor-texto-suave);
   margin-bottom: var(--espacamento-medio);
-  flex-grow: 1; /* empurra o link pro rodapé do card */
+  flex-grow: 1;
+  /* empurra o link pro rodapé do card */
 }
 
 .projeto-card a {
@@ -238,25 +292,34 @@ section {
 
 /* As 3 barrinhas do hambúrguer */
 .nav-toggle span {
-  display: block;              /* cada span vira um "bloco" */
-  width: 25px;                 /* largura da barra */
-  height: 3px;                 /* espessura da barra */
-  background-color: var(--cor-texto); /* cor (senão fica invisível) */
-  margin: 4px 0;               /* espaço entre as barras */
-  border-radius: 2px;          /* cantinhos arredondados */
+  display: block;
+  /* cada span vira um "bloco" */
+  width: 25px;
+  /* largura da barra */
+  height: 3px;
+  /* espessura da barra */
+  background-color: var(--cor-texto);
+  /* cor (senão fica invisível) */
+  margin: 4px 0;
+  /* espaço entre as barras */
+  border-radius: 2px;
+  /* cantinhos arredondados */
 }
 
 /* --- Menu de navegação --- */
 .nav {
   display: flex;
-  justify-content: space-between; /* logo na esquerda, links na direita */
+  justify-content: space-between;
+  /* logo na esquerda, links na direita */
   align-items: center;
 }
 
 .nav-lista {
   display: flex;
-  gap: var(--espacamento-grande); /* espaço entre os links */
-  list-style: none; /* tira as bolinhas da lista */
+  gap: var(--espacamento-grande);
+  /* espaço entre os links */
+  list-style: none;
+  /* tira as bolinhas da lista */
 }
 
 .nav-link {
@@ -265,21 +328,24 @@ section {
   padding: 0.5rem 0.75rem;
   font-weight: 600;
   /* gradiente com 2 metades: laranja | branco */
-  background: linear-gradient(
-    to right,
-    var(--cor-destaque) 50%,
-    var(--cor-texto) 50%
-  );
-  background-size: 200% 100%;      /* gradiente 2x maior que o link */
-  background-position: right;      /* mostra a metade branca */
-  -webkit-background-clip: text;   /* recorta o gradiente no formato das letras */
+  background: linear-gradient(to right,
+      var(--cor-destaque) 50%,
+      var(--cor-texto) 50%);
+  background-size: 200% 100%;
+  /* gradiente 2x maior que o link */
+  background-position: right;
+  /* mostra a metade branca */
+  -webkit-background-clip: text;
+  /* recorta o gradiente no formato das letras */
   background-clip: text;
-  color: transparent;              /* deixa o gradiente aparecer */
+  color: transparent;
+  /* deixa o gradiente aparecer */
   transition: background-position 0.6s ease;
 }
 
 .nav-link:hover {
-  background-position: left;       /* puxa o laranja da esquerda */
+  background-position: left;
+  /* puxa o laranja da esquerda */
 }
 
 /* Hambúrguer escondido no desktop */
@@ -319,7 +385,8 @@ section {
 .contato-links {
   display: flex;
   gap: var(--espacamento-medio);
-  flex-wrap: wrap; /* no celular quebra linha se nao couber */
+  flex-wrap: wrap;
+  /* no celular quebra linha se nao couber */
 }
 
 .contato-link {
@@ -354,12 +421,14 @@ section {
 .projeto-detalhe {
   padding: var(--espacamento-grande) 0 var(--espacamento-secao);
   min-height: auto;
-  max-width: 720px; /* coluna mais estreita e legível */
+  max-width: 720px;
+  /* coluna mais estreita e legível */
 }
 
 .pagina-projeto .header .container,
 .pagina-projeto .projeto-detalhe {
-  max-width: 720px; /* alinha "Voltar" com o título */
+  max-width: 720px;
+  /* alinha "Voltar" com o título */
 }
 
 .projeto-detalhe h1 {

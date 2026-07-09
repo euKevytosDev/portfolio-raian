@@ -13,7 +13,7 @@
   --cor-texto: #ffffff;
   --cor-texto-suave: #94a3b8;
   --cor-destaque: #ff8645;                     /* laranja */
-  --cor-destaque-hover: #e6753a;
+  --cor-destaque-hover: #d6530c;
   --cor-borda: rgba(255, 255, 255, 0.08);
 
   /* --- Fontes --- */
@@ -49,4 +49,6 @@
   --largura-maxima: 1100px;
   --borda-arredondada: 12px;
   --transicao-rapida: 0.3s ease;
+  /* Curva suave para levantar/inclinar ícones — desacelera no final (não parece robótico) */
+  --transicao-icone-movimento: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
