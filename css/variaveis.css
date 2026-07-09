@@ -49,4 +49,5 @@
   --largura-maxima: 1100px;
   --borda-arredondada: 12px;
   --transicao-rapida: 0.3s ease;
+  --altura-fade-secao: clamp(4rem, 12vh, 9rem);
 }

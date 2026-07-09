@@ -41,6 +41,24 @@ body {
   isolation: isolate;
 }
 
+/* Escumaça a base do Hero — some a linha entre seções */
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--altura-fade-secao);
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 50, 0.45) 55%,
+    var(--cor-fundo) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero-fundo {
   position: absolute;
   inset: 0;
@@ -54,6 +72,8 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
 }
 
 .hero-conteudo {
@@ -62,7 +82,7 @@ body {
   justify-content: space-between;
   gap: var(--espacamento-grande);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hero-texto {
