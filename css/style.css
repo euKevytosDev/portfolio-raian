@@ -30,7 +30,6 @@ body {
   font-size: var(--tamanho-texto);
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
-  /* navy escuro */
   line-height: 1.6;
   /* espaço entre linhas — melhora leitura */
 }
@@ -59,17 +58,36 @@ body {
 }
 
 .hero-conteudo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: var(--espacamento-grande);
   position: relative;
   z-index: 1;
 }
+.hero-conteudo.container {
+  width: 100%;
+  max-width: none;
+  padding-left: clamp(0.5rem, 4vw, 3rem);
+  padding-right: clamp(1.5rem, 4vw, 3rem);
+}
 
 .hero-texto {
-  flex: 1;
+  flex: unset;
+  justify-self: start;
   max-width: 36rem;
+}
+
+.hero-texto a {
+  font-size: var(--tamanho-subtitulo);
+  font-weight: bold;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--espacamento-medio);
 }
 
 .hero-garoto {
@@ -479,7 +497,7 @@ section {
   }
 
   .hero-conteudo {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .hero-blob {

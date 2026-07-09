@@ -8,12 +8,12 @@
   /* --- Cores principais (paleta inspirada no ryandev.com.br) --- */
   --cor-fundo: #000032;                        /* fundo geral (navy) */
   --cor-fundo-hero: #4946ff;                   /* só o Hero */
-  --cor-hero-blob-claro: #5c5cb8;              /* camada suave do blob no Hero */
-  --cor-fundo-card: rgba(0, 0, 50, 0.65);      /* cards */
+  --cor-hero-blob-claro: #5b5bb7;              /* camada clara do blob (Haikei) */
+  --cor-fundo-card: #000032;      /* cards */
   --cor-texto: #ffffff;
   --cor-texto-suave: #94a3b8;
   --cor-destaque: #ff8645;                     /* laranja */
-  --cor-destaque-hover: #d6530c;
+  --cor-destaque-hover: #e86c2a;
   --cor-borda: rgba(255, 255, 255, 0.08);
 
   /* --- Fontes --- */
@@ -49,6 +49,4 @@
   --largura-maxima: 1100px;
   --borda-arredondada: 12px;
   --transicao-rapida: 0.3s ease;
-  /* Curva suave para levantar/inclinar ícones — desacelera no final (não parece robótico) */
-  --transicao-icone-movimento: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
 }
