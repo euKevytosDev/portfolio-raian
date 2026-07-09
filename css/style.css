@@ -251,32 +251,7 @@ section {
 /* abaxo o css do grid para o projetos */
 
 .projetos {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  background-color: var(--cor-fundo-hero);
-}
-
-.projetos-fundo {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* slice = cobre a seção inteira (tela cheia), sem faixas vazias */
-.projetos-blob {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.projetos-conteudo {
-  position: relative;
-  z-index: 1;
-  width: 100%;
+  background-color: var(--cor-fundo);
 }
 
 .projetos-grid {
