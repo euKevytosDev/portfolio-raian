@@ -57,11 +57,11 @@
   /* Ajuste fino do SVG de fundo no Hero (mostra a forma inteira) */
   --hero-blob-altura: 100%;
   --hero-blob-largura-max: 100%;
-  --hero-blob-pos-direita: 0;
+  --hero-blob-pos-direita: -2.5rem;
   --hero-blob-pos-top: 0;
 
   /* Posição do avatar no Hero (negativo = mais à esquerda) */
-  --hero-visual-deslocamento-x: -2.75rem;
+  --hero-visual-deslocamento-x: -4rem;
 
   /* Curva das animações de entrada */
   --animacao-entrada: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
