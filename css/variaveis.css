@@ -7,7 +7,7 @@
 :root {
   /* --- Cores principais (paleta inspirada no ryandev.com.br) --- */
   --cor-fundo: #000032;                        /* fundo geral (navy) */
-  --cor-fundo-hero: #4946ff;                   /* só o Hero */
+  --cor-fundo-hero: #4946ff;                   /* acento azul (bolhas, gradientes) */
   --cor-hero-blob-claro: #5b5bb7;              /* camada clara do blob (Haikei) */
   --cor-fundo-card: rgba(255, 255, 255, 0.04);
   --cor-texto: #ffffff;
