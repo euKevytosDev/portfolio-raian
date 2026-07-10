@@ -74,4 +74,7 @@
   --bolha-projetos-forte: 0.32;
   --bolha-projetos-media: 0.24;
   --bolha-projetos-suave: 0.18;
+
+  /* Enquadramento da foto em Sobre mim (círculo) */
+  --sobre-foto-posicao: center 22%;
 }
