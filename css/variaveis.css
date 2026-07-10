@@ -62,4 +62,12 @@
 
   /* Curva das animações de entrada */
   --animacao-entrada: 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Opacidade das bolhas — Hero levemente mais forte que Projetos */
+  --bolha-hero-forte: 0.38;
+  --bolha-hero-media: 0.28;
+  --bolha-hero-suave: 0.22;
+  --bolha-projetos-forte: 0.32;
+  --bolha-projetos-media: 0.24;
+  --bolha-projetos-suave: 0.18;
 }

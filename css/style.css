@@ -190,18 +190,22 @@ body::-webkit-scrollbar {
 }
 
 .hero-bolhas .bolha--1 {
+  opacity: var(--bolha-hero-forte);
   animation: bolha-flutuar-a 9s ease-in-out infinite;
 }
 
 .hero-bolhas .bolha--2 {
+  opacity: var(--bolha-hero-suave);
   animation: bolha-flutuar-b 11s ease-in-out infinite 0.4s;
 }
 
 .hero-bolhas .bolha--3 {
+  opacity: var(--bolha-hero-media);
   animation: bolha-flutuar-c 7.5s ease-in-out infinite 0.8s;
 }
 
 .hero-bolhas .bolha--4 {
+  opacity: var(--bolha-hero-media);
   animation: bolha-flutuar-b 13s ease-in-out infinite 1.2s;
 }
 
@@ -450,30 +454,35 @@ section {
   width: 100%;
   height: 100%;
   display: block;
-  opacity: 0.9;
 }
 
 .projetos-bolhas .bolha--p1 {
+  opacity: var(--bolha-projetos-forte);
   animation: bolha-flutuar-b 12s ease-in-out infinite;
 }
 
 .projetos-bolhas .bolha--p2 {
+  opacity: var(--bolha-projetos-suave);
   animation: bolha-flutuar-a 9s ease-in-out infinite 0.6s;
 }
 
 .projetos-bolhas .bolha--p3 {
+  opacity: var(--bolha-projetos-media);
   animation: bolha-flutuar-c 10s ease-in-out infinite 1s;
 }
 
 .projetos-bolhas--direita .bolha--p4 {
+  opacity: var(--bolha-projetos-media);
   animation: bolha-flutuar-a 10s ease-in-out infinite 0.3s;
 }
 
 .projetos-bolhas--direita .bolha--p5 {
+  opacity: var(--bolha-projetos-suave);
   animation: bolha-flutuar-b 12s ease-in-out infinite 0.9s;
 }
 
 .projetos-bolhas--direita .bolha--p6 {
+  opacity: var(--bolha-projetos-suave);
   animation: bolha-flutuar-c 8s ease-in-out infinite 1.4s;
 }
 
@@ -902,8 +911,19 @@ section {
   }
 
   /* Projetos — bolhas mais discretas no celular */
-  .projetos-bolhas {
-    opacity: 0.45;
+  .projetos-bolhas .bolha--p1 {
+    opacity: calc(var(--bolha-projetos-media) * 0.85);
+  }
+
+  .projetos-bolhas .bolha--p2,
+  .projetos-bolhas--direita .bolha--p5,
+  .projetos-bolhas--direita .bolha--p6 {
+    opacity: calc(var(--bolha-projetos-suave) * 0.85);
+  }
+
+  .projetos-bolhas .bolha--p3,
+  .projetos-bolhas--direita .bolha--p4 {
+    opacity: calc(var(--bolha-projetos-suave) * 0.85);
   }
 
   .projetos-bolhas .bolha--p3,
