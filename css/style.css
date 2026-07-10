@@ -393,7 +393,7 @@ section {
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.02em;
-  color: var(--cor-fundo);
+  color: var(--cor-texto);
   margin-bottom: 2.125rem;
 }
 
@@ -433,12 +433,6 @@ section {
   overflow: hidden;
   isolation: isolate;
   background-color: var(--cor-fundo);
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(135deg, rgba(73, 70, 255, 0.1) 0%, transparent 42%),
-    linear-gradient(315deg, rgba(91, 91, 183, 0.06) 0%, transparent 38%);
-  background-size: 28px 28px, 100% 100%, 100% 100%;
-  background-position: center, 0 0, 100% 100%;
 }
 
 /* Bolhas SVG decorativas — esquerda, atrás dos cards */
@@ -841,10 +835,6 @@ section {
   }
 
   /* Projetos — bolhas mais discretas no celular */
-  .projetos {
-    background-size: 22px 22px, 100% 100%, 100% 100%;
-  }
-
   .projetos-bolhas {
     opacity: 0.45;
   }
