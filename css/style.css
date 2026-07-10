@@ -869,6 +869,7 @@ section {
   .hero-texto {
     max-width: 100%;
     text-align: center;
+    transform: none;
   }
 
   .hero-texto > * {
