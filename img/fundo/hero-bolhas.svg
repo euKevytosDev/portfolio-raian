@@ -1,6 +1,6 @@
 <svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid meet">
   <circle cx="672" cy="196" r="115" fill="#5b5bb7" />
-  <circle cx="806" cy="589" r="135" fill="#000032" />
-  <circle cx="429" cy="550" r="69" fill="#5b5bb7" opacity="0.75" />
+  <circle cx="806" cy="455" r="135" fill="#000032" />
+  <circle cx="429" cy="465" r="69" fill="#5b5bb7" />
   <circle cx="194" cy="262" r="183" fill="#4946ff" opacity="0.35" />
 </svg>
