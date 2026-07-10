@@ -1026,7 +1026,7 @@ section {
   }
 
   .sobre-chips {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .sobre-conteudo p {
