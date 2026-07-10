@@ -62,7 +62,7 @@
 
   /* Ajuste fino do conteúdo do Hero (positivo = mais ao centro) */
   --hero-texto-deslocamento-x: 1.75rem;
-  --hero-visual-deslocamento-x: -1.25rem;
+  --hero-garoto-deslocamento-x: -2.25rem;
 
   /* Curva das animações de entrada */
   --animacao-entrada: 0.8s cubic-bezier(0.22, 1, 0.36, 1);

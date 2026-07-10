@@ -72,12 +72,12 @@ body::-webkit-scrollbar {
 @keyframes entrar-da-direita {
   from {
     opacity: 0;
-    transform: translateX(calc(36px + var(--hero-visual-deslocamento-x)));
+    transform: translateX(36px);
   }
 
   to {
     opacity: 1;
-    transform: translateX(var(--hero-visual-deslocamento-x));
+    transform: translateX(0);
   }
 }
 
@@ -147,7 +147,11 @@ body::-webkit-scrollbar {
   }
 
   .hero-visual {
-    transform: translateX(var(--hero-visual-deslocamento-x)) !important;
+    transform: none !important;
+  }
+
+  .hero-garoto {
+    transform: translateX(var(--hero-garoto-deslocamento-x)) !important;
   }
 
   .hero-texto {
@@ -280,7 +284,6 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: var(--espacamento-medio);
-  transform: translateX(var(--hero-visual-deslocamento-x));
   animation: entrar-da-direita 1s var(--animacao-entrada) 0.32s both;
 }
 
@@ -289,6 +292,7 @@ body::-webkit-scrollbar {
   max-width: 320px;
   width: 100%;
   height: auto;
+  transform: translateX(var(--hero-garoto-deslocamento-x));
   filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.28));
 }
 
