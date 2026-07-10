@@ -142,11 +142,18 @@
     <section id="projetos" class="projetos">
       <div class="projetos-decoracao" aria-hidden="true">
         <!-- Referência: img/fundo/projetos-bolhas.svg -->
-        <svg class="projetos-bolhas" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+        <svg class="projetos-bolhas projetos-bolhas--esquerda" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMinYMid meet">
           <circle class="bolha bolha--p1" cx="194" cy="262" r="183" fill="var(--cor-hero-blob-claro)" opacity="0.32" />
           <circle class="bolha bolha--p2" cx="94" cy="520" r="69" fill="var(--cor-fundo-hero)" opacity="0.2" />
           <circle class="bolha bolha--p3" cx="320" cy="120" r="95" fill="var(--cor-hero-blob-claro)" opacity="0.22" />
+        </svg>
+        <!-- Referência: img/fundo/projetos-bolhas-direita.svg -->
+        <svg class="projetos-bolhas projetos-bolhas--direita" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMaxYMid meet">
+          <circle class="bolha bolha--p4" cx="706" cy="280" r="130" fill="var(--cor-hero-blob-claro)" opacity="0.28" />
+          <circle class="bolha bolha--p5" cx="820" cy="480" r="85" fill="var(--cor-fundo-hero)" opacity="0.18" />
+          <circle class="bolha bolha--p6" cx="640" cy="520" r="58" fill="var(--cor-hero-blob-claro)" opacity="0.24" />
         </svg>
       </div>
 
@@ -166,19 +173,33 @@
       SOBRE MIM
       ============================================
     -->
-    <section id="sobre">
+    <section id="sobre" class="sobre">
       <div class="container">
         <h2 class="titulo-secao">Sobre mim</h2>
-        <div class="sobre-conteudo">
-          <p>
-            Tenho 21 anos, curso Análise e Desenvolvimento de Sistemas (4º semestre)
-            e estou construindo minha carreira como desenvolvedor Full Stack.
-          </p>
-          <p>
-            Já desenvolvi um site de casamento completo (HTML, CSS e JS),
-            publiquei no GitHub Pages e tenho um backend em Spring Boot + PostgreSQL
-            hospedado na Render.
-          </p>
+
+        <div class="sobre-grid">
+          <div class="sobre-foto-wrapper">
+            <!-- Troque o src pela sua foto quando tiver (ex.: img/perfil/foto-raian.jpg) -->
+            <img src="img/perfil/Boy_1-Cd35LwGF.png" alt="Raian Kevin" class="sobre-foto" width="320" height="320">
+          </div>
+
+          <div class="sobre-conteudo">
+            <ul class="sobre-chips" aria-label="Destaques">
+              <li class="sobre-chip">21 anos</li>
+              <li class="sobre-chip">4º semestre — ADS</li>
+              <li class="sobre-chip">Full Stack</li>
+            </ul>
+
+            <p>
+              Tenho 21 anos, curso Análise e Desenvolvimento de Sistemas (4º semestre)
+              e estou construindo minha carreira como desenvolvedor Full Stack.
+            </p>
+            <p>
+              Já desenvolvi um site de casamento completo (HTML, CSS e JS),
+              publiquei no GitHub Pages e tenho um backend em Spring Boot + PostgreSQL
+              hospedado na Render.
+            </p>
+          </div>
         </div>
       </div>
     </section>
