@@ -793,7 +793,15 @@ section {
   line-height: 1.65;
 }
 
-.sobre-conteudo p:last-of-type {
+.sobre-conteudo .texto-final {
+  margin-top: var(--espacamento-pequeno);
+  margin-bottom: var(--espacamento-medio);
+  max-width: 36rem;
+}
+
+.sobre-conteudo .texto-final p {
+  color: var(--cor-destaque);
+  font-weight: 700;
   margin-bottom: 0;
 }
 
