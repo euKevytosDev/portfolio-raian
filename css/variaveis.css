@@ -83,5 +83,7 @@
   --sobre-foto-posicao: center 22%;
 
   /* Carrossel de Skills — quanto maior, mais lento */
-  --skills-carrossel-duracao: 38s;
+  --skills-carrossel-duracao: 42s;
+  /* Quanto maior, mais cedo os ícones somem nas bordas (evita ver duplicados) */
+  --skills-carrossel-fade: 24%;
 }

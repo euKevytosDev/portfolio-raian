@@ -810,12 +810,47 @@ section {
   overflow: hidden;
 }
 
-/* Janela do carrossel — esconde o que passa das bordas */
+/* Janela do carrossel — fade largo nas bordas */
 .skills-carrossel {
+  position: relative;
   overflow: hidden;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 var(--skills-carrossel-fade),
+    #000 calc(100% - var(--skills-carrossel-fade)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 var(--skills-carrossel-fade),
+    #000 calc(100% - var(--skills-carrossel-fade)),
+    transparent 100%
+  );
+}
+
+/* Escurece com a cor do fundo antes da borda da tela */
+.skills-carrossel::before,
+.skills-carrossel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: min(32%, 14rem);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skills-carrossel::before {
+  left: 0;
+  background: linear-gradient(to right, var(--cor-fundo) 20%, transparent);
+}
+
+.skills-carrossel::after {
+  right: 0;
+  background: linear-gradient(to left, var(--cor-fundo) 20%, transparent);
 }
 
 /* Faixa que se move — contém 2 listas iguais lado a lado */
@@ -825,7 +860,7 @@ section {
   animation: skills-deslizar var(--skills-carrossel-duracao) linear infinite;
 }
 
-.skills-carrossel-faixa:hover {
+.skills-carrossel:hover .skills-carrossel-faixa {
   animation-play-state: paused;
 }
 
@@ -833,9 +868,9 @@ section {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  gap: var(--espacamento-grande);
+  gap: 2.75rem;
   list-style: none;
-  padding: 0 var(--espacamento-grande);
+  padding: 0 2.75rem;
 }
 
 .skill-item {
@@ -1109,6 +1144,20 @@ section {
 
   .sobre-grid {
     grid-template-columns: 1fr;
+  }
+
+  .skills {
+    --skills-carrossel-fade: 30%;
+  }
+
+  .skills-carrossel::before,
+  .skills-carrossel::after {
+    width: min(40%, 10rem);
+  }
+
+  .skills-lista {
+    gap: 2rem;
+    padding: 0 2rem;
   }
 
   .sobre-foto-coluna {
