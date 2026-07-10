@@ -675,7 +675,6 @@ section {
 
 .sobre {
   min-height: auto;
-  border-bottom: 1px solid rgba(255, 134, 69, 0.22);
 }
 
 .sobre-grid {
@@ -709,6 +708,14 @@ section {
   border: 3px solid rgba(255, 134, 69, 0.45);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
   background-color: var(--cor-fundo-card);
+  transition:
+    border-color var(--transicao-rapida),
+    box-shadow var(--transicao-card);
+}
+
+.sobre-foto-wrapper:hover {
+  border-color: rgba(255, 134, 69, 0.6);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4);
 }
 
 .sobre-foto {
@@ -718,6 +725,11 @@ section {
   object-position: var(--sobre-foto-posicao);
   display: block;
   transform: scale(1.05);
+  transition: transform var(--transicao-card);
+}
+
+.sobre-foto-wrapper:hover .sobre-foto {
+  transform: scale(1.1);
 }
 
 .sobre-chips {
@@ -730,13 +742,22 @@ section {
 
 .sobre-chip {
   background-color: var(--cor-fundo-card);
-  color: var(--cor-destaque);
+  color: var(--cor-texto);
   padding: 0.4rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(255, 134, 69, 0.35);
+  border: 1px solid var(--cor-borda);
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
+  transition:
+    color var(--transicao-rapida),
+    border-color var(--transicao-rapida);
+  cursor: default;
+}
+
+.sobre-chip:hover {
+  color: var(--cor-destaque);
+  border-color: rgba(255, 134, 69, 0.45);
 }
 
 .sobre-conteudo p {
