@@ -803,26 +803,19 @@ section {
 }
 
 .skills {
+  display: block;
+  width: 100%;
   min-height: auto;
-  padding-bottom: var(--espacamento-secao);
-}
-
-.skills-cabecalho {
-  margin-bottom: var(--espacamento-grande);
-}
-
-.skills-subtitulo {
-  color: var(--cor-texto-suave);
-  font-size: 1rem;
-  margin-top: calc(var(--espacamento-pequeno) * -1);
+  padding: var(--espacamento-grande) 0 var(--espacamento-secao);
+  overflow: hidden;
 }
 
 /* Janela do carrossel — esconde o que passa das bordas */
 .skills-carrossel {
   overflow: hidden;
   width: 100%;
-  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
-  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 4%, #000 96%, transparent);
 }
 
 /* Faixa que se move — contém 2 listas iguais lado a lado */
@@ -840,28 +833,38 @@ section {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  gap: var(--espacamento-medio);
+  gap: var(--espacamento-grande);
   list-style: none;
-  padding: 0 var(--espacamento-medio);
+  padding: 0 var(--espacamento-grande);
 }
 
 .skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 4.75rem;
+  height: 4.75rem;
   background-color: var(--cor-fundo-card);
-  color: var(--cor-texto);
-  padding: var(--espacamento-pequeno) var(--espacamento-medio);
   border-radius: var(--borda-arredondada);
   border: 1px solid var(--cor-borda);
-  white-space: nowrap;
-  font-weight: 600;
-  font-size: 0.9375rem;
   transition:
-    color var(--transicao-rapida),
-    border-color var(--transicao-rapida);
+    transform var(--transicao-rapida),
+    border-color var(--transicao-rapida),
+    box-shadow var(--transicao-rapida);
 }
 
 .skill-item:hover {
-  color: var(--cor-destaque);
+  transform: translateY(-4px);
   border-color: rgba(255, 134, 69, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.skill-logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  display: block;
 }
 
 .contato-texto {
@@ -1155,10 +1158,6 @@ section {
 
   .projeto-card:hover .projeto-card-img {
     transform: none;
-  }
-
-  .skills-cabecalho {
-    text-align: center;
   }
 
   .nav-toggle {

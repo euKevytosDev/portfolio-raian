@@ -67,16 +67,14 @@ projetos.forEach(function (projeto) {
 // 3) Duplicamos a lista para o CSS animar -50% sem "pulo" visual
 
 const skills = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "Java",
-  "Spring Boot",
-  "PostgreSQL",
-  "React",
-  "Git & GitHub",
-  "Full Stack",
-  "ADS — 4º semestre"
+  { nome: "HTML5", logo: "img/skills/html5.svg" },
+  { nome: "CSS3", logo: "img/skills/css3.svg" },
+  { nome: "JavaScript", logo: "img/skills/javascript.svg" },
+  { nome: "Java", logo: "img/skills/java.svg" },
+  { nome: "Spring Boot", logo: "img/skills/spring.svg" },
+  { nome: "PostgreSQL", logo: "img/skills/postgresql.svg" },
+  { nome: "React", logo: "img/skills/react.svg" },
+  { nome: "Git", logo: "img/skills/git.svg" }
 ];
 
 const faixaSkills = document.querySelector("#skills-faixa");
@@ -85,7 +83,11 @@ function montarItensSkills() {
   let html = "";
 
   skills.forEach(function (skill) {
-    html += `<li class="skill-item">${skill}</li>`;
+    html += `
+      <li class="skill-item">
+        <img src="${skill.logo}" alt="${skill.nome}" class="skill-logo" width="40" height="40" loading="lazy">
+      </li>
+    `;
   });
 
   return html;
