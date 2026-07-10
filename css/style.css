@@ -899,10 +899,20 @@ section {
 }
 
 .skill-logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   object-fit: contain;
   display: block;
+  filter: var(--skill-icone-filtro-repouso);
+  opacity: var(--skill-icone-opacidade-repouso);
+  transition:
+    filter var(--transicao-rapida),
+    opacity var(--transicao-rapida);
+}
+
+.skill-item:hover .skill-logo {
+  filter: var(--skill-icone-filtro-hover);
+  opacity: 1;
 }
 
 .contato-texto {

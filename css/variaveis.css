@@ -86,4 +86,9 @@
   --skills-carrossel-duracao: 45s;
   --skills-carrossel-fade: 32%;
   --skills-carrossel-gap: 2.5rem;
+
+  /* Ícones do carrossel — repouso claro, hover laranja (igual ícones da Hero) */
+  --skill-icone-filtro-repouso: brightness(0) invert(1);
+  --skill-icone-opacidade-repouso: 0.82;
+  --skill-icone-filtro-hover: brightness(0) saturate(100%) invert(58%) sepia(90%) saturate(1200%) hue-rotate(347deg) brightness(102%) contrast(101%);
 }
