@@ -58,15 +58,13 @@
     -->
     <section id="hero" class="hero">
       <div class="hero-fundo" aria-hidden="true">
-        <!-- Referência: img/fundo/layered-waves-haikei.svg -->
-        <svg class="hero-blob" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+        <!-- Referência: img/fundo/hero-bolhas.svg -->
+        <svg class="hero-blob hero-bolhas" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
           preserveAspectRatio="xMaxYMid meet">
-          <path
-            d="M731 600L663.8 585.7C596.7 571.3 462.3 542.7 422.7 514.2C383 485.7 438 457.3 474.7 428.8C511.3 400.3 529.7 371.7 500.7 343C471.7 314.3 395.3 285.7 382.3 257C369.3 228.3 419.7 199.7 408.3 171.2C397 142.7 324 114.3 359.3 85.8C394.7 57.3 538.3 28.7 610.2 14.3L682 0L900 0L900 600Z"
-            fill="var(--cor-hero-blob-claro)" />
-          <path
-            d="M733 600L702 585.7C671 571.3 609 542.7 605 514.2C601 485.7 655 457.3 697.8 428.8C740.7 400.3 772.3 371.7 752 343C731.7 314.3 659.3 285.7 652.3 257C645.3 228.3 703.7 199.7 721.3 171.2C739 142.7 716 114.3 674.5 85.8C633 57.3 573 28.7 543 14.3L513 0L900 0L900 600Z"
-            fill="var(--cor-fundo)" />
+          <circle class="bolha bolha--1" cx="672" cy="196" r="115" fill="var(--cor-hero-blob-claro)" />
+          <circle class="bolha bolha--2" cx="806" cy="589" r="135" fill="var(--cor-fundo)" />
+          <circle class="bolha bolha--3" cx="429" cy="550" r="69" fill="var(--cor-hero-blob-claro)" opacity="0.75" />
+          <circle class="bolha bolha--4" cx="194" cy="262" r="183" fill="var(--cor-fundo-hero)" opacity="0.35" />
         </svg>
       </div>
 
@@ -143,9 +141,13 @@
     -->
     <section id="projetos" class="projetos">
       <div class="projetos-decoracao" aria-hidden="true">
-        <span class="projetos-orb projetos-orb--1"></span>
-        <span class="projetos-orb projetos-orb--2"></span>
-        <span class="projetos-orb projetos-orb--3"></span>
+        <!-- Referência: img/fundo/projetos-bolhas.svg -->
+        <svg class="projetos-bolhas" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMinYMid meet">
+          <circle class="bolha bolha--p1" cx="194" cy="262" r="183" fill="var(--cor-hero-blob-claro)" opacity="0.32" />
+          <circle class="bolha bolha--p2" cx="94" cy="520" r="69" fill="var(--cor-fundo-hero)" opacity="0.2" />
+          <circle class="bolha bolha--p3" cx="320" cy="120" r="95" fill="var(--cor-hero-blob-claro)" opacity="0.22" />
+        </svg>
       </div>
 
       <div class="container projetos-conteudo">

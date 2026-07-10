@@ -105,6 +105,36 @@ body::-webkit-scrollbar {
   }
 }
 
+@keyframes bolha-flutuar-a {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-10px, -14px);
+  }
+}
+
+@keyframes bolha-flutuar-b {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(8px, -12px);
+  }
+}
+
+@keyframes bolha-flutuar-c {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-6px, 10px) scale(1.04);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .header,
   .hero-blob,
@@ -118,6 +148,12 @@ body::-webkit-scrollbar {
 
   .hero-visual {
     transform: translateX(var(--hero-visual-deslocamento-x)) !important;
+  }
+
+  .bolha {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
@@ -145,6 +181,28 @@ body::-webkit-scrollbar {
   max-width: var(--hero-blob-largura-max);
   display: block;
   animation: blob-deslizar 1s var(--animacao-entrada) 0.1s both;
+}
+
+/* Bolhas SVG — animação lenta e contínua (só CSS, grátis) */
+.bolha {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-bolhas .bolha--1 {
+  animation: bolha-flutuar-a 9s ease-in-out infinite;
+}
+
+.hero-bolhas .bolha--2 {
+  animation: bolha-flutuar-b 11s ease-in-out infinite 0.4s;
+}
+
+.hero-bolhas .bolha--3 {
+  animation: bolha-flutuar-c 7.5s ease-in-out infinite 0.8s;
+}
+
+.hero-bolhas .bolha--4 {
+  animation: bolha-flutuar-b 13s ease-in-out infinite 1.2s;
 }
 
 .hero-conteudo {
@@ -383,7 +441,7 @@ section {
   background-position: center, 0 0, 100% 100%;
 }
 
-/* Orbes suaves — decoração sem competir com os cards */
+/* Bolhas SVG decorativas — esquerda, atrás dos cards */
 .projetos-decoracao {
   position: absolute;
   inset: 0;
@@ -392,34 +450,25 @@ section {
   overflow: hidden;
 }
 
-.projetos-orb {
+.projetos-bolhas {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.9;
 }
 
-.projetos-orb--1 {
-  width:  min(22rem, 55vw);
-  height: min(22rem, 55vw);
-  top: 8%;
-  left: -6%;
-  background: rgba(91, 91, 183, 0.28);
+.projetos-bolhas .bolha--p1 {
+  animation: bolha-flutuar-b 12s ease-in-out infinite;
 }
 
-.projetos-orb--2 {
-  width:  min(16rem, 40vw);
-  height: min(16rem, 40vw);
-  bottom: 12%;
-  right: -4%;
-  background: rgba(73, 70, 255, 0.18);
+.projetos-bolhas .bolha--p2 {
+  animation: bolha-flutuar-a 9s ease-in-out infinite 0.6s;
 }
 
-.projetos-orb--3 {
-  width:  min(9rem, 24vw);
-  height: min(9rem, 24vw);
-  top: 48%;
-  right: 18%;
-  background: rgba(255, 134, 69, 0.07);
+.projetos-bolhas .bolha--p3 {
+  animation: bolha-flutuar-c 10s ease-in-out infinite 1s;
 }
 
 .projetos-conteudo {
@@ -791,26 +840,16 @@ section {
     font-size: 1rem;
   }
 
-  /* Projetos — fundo mais rico, cards em destaque */
+  /* Projetos — bolhas mais discretas no celular */
   .projetos {
     background-size: 22px 22px, 100% 100%, 100% 100%;
   }
 
-  .projetos-orb--1 {
-    width: 14rem;
-    height: 14rem;
-    top: 4%;
-    left: -18%;
+  .projetos-bolhas {
+    opacity: 0.45;
   }
 
-  .projetos-orb--2 {
-    width: 11rem;
-    height: 11rem;
-    bottom: 8%;
-    right: -12%;
-  }
-
-  .projetos-orb--3 {
+  .projetos-bolhas .bolha--p3 {
     display: none;
   }
 
