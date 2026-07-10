@@ -137,11 +137,11 @@ body::-webkit-scrollbar {
 
 @keyframes skills-deslizar {
   from {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -186,7 +186,7 @@ body::-webkit-scrollbar {
     mask-image: none;
   }
 
-  .skills-lista--copia {
+  .skills-lista .skill-item:nth-child(n + 9) {
     display: none;
   }
 }
@@ -838,25 +838,26 @@ section {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: min(32%, 14rem);
+  width: min(34%, 15rem);
   z-index: 2;
   pointer-events: none;
 }
 
 .skills-carrossel::before {
   left: 0;
-  background: linear-gradient(to right, var(--cor-fundo) 20%, transparent);
+  background: linear-gradient(to right, var(--cor-fundo) 35%, transparent);
 }
 
 .skills-carrossel::after {
   right: 0;
-  background: linear-gradient(to left, var(--cor-fundo) 20%, transparent);
+  background: linear-gradient(to left, var(--cor-fundo) 35%, transparent);
 }
 
-/* Faixa que se move — contém 2 listas iguais lado a lado */
+/* Uma única lista com itens duplicados — espaçamento uniforme, sem “pulo” no HTML */
 .skills-carrossel-faixa {
   display: flex;
   width: max-content;
+  will-change: transform;
   animation: skills-deslizar var(--skills-carrossel-duracao) linear infinite;
 }
 
@@ -868,9 +869,10 @@ section {
   display: flex;
   flex-shrink: 0;
   align-items: center;
-  gap: 2.75rem;
+  gap: var(--skills-carrossel-gap);
   list-style: none;
-  padding: 0 2.75rem;
+  padding: 0;
+  margin: 0;
 }
 
 .skill-item {
@@ -880,6 +882,7 @@ section {
   flex-shrink: 0;
   width: 4.75rem;
   height: 4.75rem;
+  box-sizing: border-box;
   background-color: var(--cor-fundo-card);
   border-radius: var(--borda-arredondada);
   border: 1px solid var(--cor-borda);
@@ -1147,17 +1150,16 @@ section {
   }
 
   .skills {
-    --skills-carrossel-fade: 30%;
+    --skills-carrossel-fade: 32%;
   }
 
   .skills-carrossel::before,
   .skills-carrossel::after {
-    width: min(40%, 10rem);
+    width: min(42%, 11rem);
   }
 
   .skills-lista {
     gap: 2rem;
-    padding: 0 2rem;
   }
 
   .sobre-foto-coluna {

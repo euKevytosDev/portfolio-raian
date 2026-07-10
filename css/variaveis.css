@@ -82,8 +82,8 @@
   /* Enquadramento da foto em Sobre mim (círculo) */
   --sobre-foto-posicao: center 22%;
 
-  /* Carrossel de Skills — quanto maior, mais lento */
-  --skills-carrossel-duracao: 42s;
-  /* Quanto maior, mais cedo os ícones somem nas bordas (evita ver duplicados) */
-  --skills-carrossel-fade: 24%;
+  /* Carrossel de Skills */
+  --skills-carrossel-duracao: 45s;
+  --skills-carrossel-fade: 27%;
+  --skills-carrossel-gap: 2.5rem;
 }
