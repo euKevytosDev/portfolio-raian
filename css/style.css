@@ -371,7 +371,7 @@ body::-webkit-scrollbar {
 /* Títulos de seção (ex: "Projetos", "Sobre mim") */
 .titulo-secao {
   font-family: var(--fonte-titulo);
-  font-size: var(--tamanho-titulo);
+  font-size: var(--tamanho-subtitulo);
   color: var(--cor-destaque);
   margin-bottom: var(--espacamento-grande);
   text-transform: uppercase;
@@ -869,21 +869,24 @@ section {
 
   .hero-blob {
     height: 100%;
-    max-width: 62%;
-    right: -1.25rem;
-  }
-
-  .hero-bolhas .bolha--2,
-  .hero-bolhas .bolha--4 {
-    display: none;
+    max-width: 80%;
+    right: -0.5rem;
   }
 
   .hero-bolhas .bolha--1 {
-    opacity: calc(var(--bolha-hero-media) * 0.95);
+    opacity: calc(var(--bolha-hero-forte) * var(--bolha-mobile-fator-hero));
+  }
+
+  .hero-bolhas .bolha--2 {
+    opacity: calc(var(--bolha-hero-suave) * var(--bolha-mobile-fator-hero));
   }
 
   .hero-bolhas .bolha--3 {
-    opacity: calc(var(--bolha-hero-suave) * 0.95);
+    opacity: calc(var(--bolha-hero-media) * var(--bolha-mobile-fator-hero));
+  }
+
+  .hero-bolhas .bolha--4 {
+    opacity: calc(var(--bolha-hero-media) * calc(var(--bolha-mobile-fator-hero) - 0.04));
   }
 
   .hero-conteudo {
@@ -962,33 +965,38 @@ section {
     padding: 1rem 2rem;
   }
 
-  /* Projetos — bolhas parciais e discretas no celular */
+  /* Projetos — bolhas no padrão desktop, levemente adaptadas ao celular */
   .projetos-bolhas .bolha--p1 {
-    opacity: calc(var(--bolha-projetos-media) * 0.85);
+    opacity: calc(var(--bolha-projetos-forte) * var(--bolha-mobile-fator-projetos));
   }
 
-  .projetos-bolhas .bolha--p2,
-  .projetos-bolhas--direita .bolha--p5 {
-    opacity: calc(var(--bolha-projetos-suave) * 0.85);
+  .projetos-bolhas .bolha--p2 {
+    opacity: calc(var(--bolha-projetos-suave) * var(--bolha-mobile-fator-projetos));
   }
 
-  .projetos-bolhas .bolha--p3,
+  .projetos-bolhas .bolha--p3 {
+    opacity: calc(var(--bolha-projetos-media) * var(--bolha-mobile-fator-projetos));
+  }
+
   .projetos-bolhas--direita .bolha--p4 {
-    opacity: calc(var(--bolha-projetos-suave) * 0.7);
+    opacity: calc(var(--bolha-projetos-media) * var(--bolha-mobile-fator-projetos));
+  }
+
+  .projetos-bolhas--direita .bolha--p5 {
+    opacity: calc(var(--bolha-projetos-suave) * var(--bolha-mobile-fator-projetos));
   }
 
   .projetos-bolhas--direita .bolha--p6 {
-    opacity: calc(var(--bolha-projetos-suave) * 0.65);
-  }
-
-  .projetos-bolhas .bolha--p2,
-  .projetos-bolhas--direita .bolha--p5 {
-    display: none;
+    opacity: calc(var(--bolha-projetos-suave) * calc(var(--bolha-mobile-fator-projetos) - 0.05));
   }
 
   .sobre-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .sobre-conteudo {
+    text-align: left;
   }
 
   .sobre-foto-wrapper {

@@ -75,6 +75,10 @@
   --bolha-projetos-media: 0.24;
   --bolha-projetos-suave: 0.18;
 
+  /* Mobile — quase o padrão desktop, levemente mais suave */
+  --bolha-mobile-fator-hero: 0.92;
+  --bolha-mobile-fator-projetos: 0.9;
+
   /* Enquadramento da foto em Sobre mim (círculo) */
   --sobre-foto-posicao: center 22%;
 }
