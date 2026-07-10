@@ -61,6 +61,45 @@ projetos.forEach(function (projeto) {
   grid.innerHTML += card;
 });
 
+// --- SKILLS: carrossel infinito ---
+// 1) Array = fonte única dos dados (igual aos projetos)
+// 2) Montamos o HTML das tags uma vez
+// 3) Duplicamos a lista para o CSS animar -50% sem "pulo" visual
+
+const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "Java",
+  "Spring Boot",
+  "PostgreSQL",
+  "React",
+  "Git & GitHub",
+  "Full Stack",
+  "ADS — 4º semestre"
+];
+
+const faixaSkills = document.querySelector("#skills-faixa");
+
+function montarItensSkills() {
+  let html = "";
+
+  skills.forEach(function (skill) {
+    html += `<li class="skill-item">${skill}</li>`;
+  });
+
+  return html;
+}
+
+if (faixaSkills) {
+  const itens = montarItensSkills();
+
+  faixaSkills.innerHTML = `
+    <ul class="skills-lista">${itens}</ul>
+    <ul class="skills-lista skills-lista--copia" aria-hidden="true">${itens}</ul>
+  `;
+}
+
 // --- NAVEGAÇÃO ATIVA: destaca o link da seção visível ---
 function destacarLinkAtivo() {
   const posicaoScroll = window.scrollY + 150;

@@ -81,4 +81,7 @@
 
   /* Enquadramento da foto em Sobre mim (círculo) */
   --sobre-foto-posicao: center 22%;
+
+  /* Carrossel de Skills — quanto maior, mais lento */
+  --skills-carrossel-duracao: 38s;
 }
