@@ -838,19 +838,19 @@ section {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: min(34%, 15rem);
+  width: min(38%, 16rem);
   z-index: 2;
   pointer-events: none;
 }
 
 .skills-carrossel::before {
   left: 0;
-  background: linear-gradient(to right, var(--cor-fundo) 35%, transparent);
+  background: linear-gradient(to right, var(--cor-fundo) 48%, transparent);
 }
 
 .skills-carrossel::after {
   right: 0;
-  background: linear-gradient(to left, var(--cor-fundo) 35%, transparent);
+  background: linear-gradient(to left, var(--cor-fundo) 48%, transparent);
 }
 
 /* Uma única lista com itens duplicados — espaçamento uniforme, sem “pulo” no HTML */
@@ -1150,12 +1150,12 @@ section {
   }
 
   .skills {
-    --skills-carrossel-fade: 32%;
+    --skills-carrossel-fade: 36%;
   }
 
   .skills-carrossel::before,
   .skills-carrossel::after {
-    width: min(42%, 11rem);
+    width: min(44%, 12rem);
   }
 
   .skills-lista {
