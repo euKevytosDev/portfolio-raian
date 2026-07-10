@@ -923,6 +923,35 @@ section {
   opacity: 1;
 }
 
+.contato {
+  display: block;
+  min-height: auto;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+}
+
+.contato-garoto {
+  justify-self: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Garoto 2 — mesma ideia do .hero-garoto, classe própria para você estilizar */
+.garoto2 {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  /* PNG veio com fundo preto: lighten “some” o preto no fundo navy */
+  mix-blend-mode: lighten;
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.28));
+}
+
 .contato-texto {
   color: var(--cor-texto-suave);
   margin-bottom: var(--espacamento-grande);
@@ -1014,6 +1043,10 @@ section {
   padding: var(--espacamento-pequeno) var(--espacamento-medio);
   border-radius: var(--borda-arredondada);
   border: 1px solid var(--cor-borda);
+}
+
+.gatoro2 {
+  max-width: 90px;
 }
 
 
@@ -1204,6 +1237,21 @@ section {
   .sobre-conteudo p {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .contato-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .contato-garoto {
+    order: -1;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .contato-links {
+    justify-content: center;
   }
 
   .projetos-cabecalho {
