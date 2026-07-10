@@ -150,6 +150,10 @@ body::-webkit-scrollbar {
     transform: translateX(var(--hero-visual-deslocamento-x)) !important;
   }
 
+  .hero-texto {
+    transform: translateX(var(--hero-texto-deslocamento-x)) !important;
+  }
+
   .bolha {
     animation: none !important;
     opacity: 1 !important;
@@ -228,6 +232,7 @@ body::-webkit-scrollbar {
   flex: unset;
   justify-self: start;
   max-width: 36rem;
+  transform: translateX(var(--hero-texto-deslocamento-x));
 }
 
 .hero-texto > * {
