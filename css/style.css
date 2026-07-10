@@ -675,6 +675,7 @@ section {
 
 .sobre {
   min-height: auto;
+  border-bottom: 1px solid rgba(255, 134, 69, 0.22);
 }
 
 .sobre-grid {
@@ -745,8 +746,13 @@ section {
   line-height: 1.65;
 }
 
-.sobre-conteudo p:last-child {
+.sobre-conteudo p:last-of-type {
   margin-bottom: 0;
+}
+
+.sobre-btn {
+  margin-top: var(--espacamento-grande);
+  display: inline-block;
 }
 
 .skills-lista {
