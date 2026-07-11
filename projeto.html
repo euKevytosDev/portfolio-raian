@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detalhes do projeto — portfólio de Raian Kevin">
   <title>Projeto | Raian Kevin</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -18,14 +20,22 @@
   </header>
 
   <main class="container projeto-detalhe">
-    <!-- O JS vai preencher esses elementos no Passo 4 -->
-    <h1 id="projeto-titulo">Carregando...</h1>
-    <img id="projeto-imagem" src="" alt="">
-    <p id="projeto-descricao"></p>
-    <ul id="projeto-tecnologias"></ul>
-    <a id="projeto-link" class="btn" href="#" target="_blank" rel="noopener">Ver ao vivo</a>
+    <div id="projeto-erro" class="projeto-erro" hidden>
+      <h1>Projeto não encontrado</h1>
+      <p>O link pode estar incorreto ou o projeto não existe mais.</p>
+      <a href="index.html#projetos" class="btn">Ver todos os projetos</a>
+    </div>
+
+    <div id="projeto-conteudo">
+      <h1 id="projeto-titulo">Carregando...</h1>
+      <img id="projeto-imagem" src="" alt="">
+      <p id="projeto-descricao"></p>
+      <ul id="projeto-tecnologias"></ul>
+      <a id="projeto-link" class="btn" href="#" target="_blank" rel="noopener">Ver ao vivo</a>
+    </div>
   </main>
 
+  <script src="js/projetos-dados.js"></script>
   <script src="js/projeto.js"></script>
 </body>
 </html>

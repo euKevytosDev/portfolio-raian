@@ -1,50 +1,33 @@
 const parametros = new URLSearchParams(window.location.search);
 const id = parametros.get("id");
 
-const projetos = [
-    {
-        id: "casamento",
-        titulo: "Rafaella & Kevin",
-        descricao: "Site de casamento completo com confirmação de presença e lista de presentes.",
-        descricaoLonga: "Site completo para o casamento de Rafaella e Kevin, pensado para os convidados acessarem pelo celular. No front-end, desenvolvi a experiência do convite animado, galeria de fotos, confirmação de presença em família e lista de presentes com reserva online. No back-end, criei uma API REST em Spring Boot com PostgreSQL (Neon), autenticação JWT para o painel admin e deploy na Render. Foi o projeto que mais me fez evoluir em JavaScript com fetch e integração com API.",
-        imagem: "img/projetos/img-casamento.jpg",
-        tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL"],
-        link: "https://eukevytosdev.github.io/site-casamento/"
-    },
-    {
-        id: "padaria-lider",
-        titulo: "Padaria Líder",
-        descricao: "Landing page mobile-first com vitrine e contato via WhatsApp.",
-        descricaoLonga: "Landing page freelancer desenvolvida para a Padaria Líder, com foco total em mobile-first. O objetivo era dar presença digital à padaria com vitrine de produtos, informações de contato e botão direto para WhatsApp. Organizei o projeto com CSS em variáveis, dados centralizados em config.js e JavaScript puro para menu e interações. Este template depois foi reaproveitado na landing da Padaria Braga, mostrando que consigo escalar um projeto para outro cliente.",
-        imagem: "img/projetos/img-padarialider.png",
-        tecnologias: ["HTML", "CSS", "JavaScript"],
-        link: "https://eukevytosdev.github.io/padaria-esquina-landing/"
-    }
-];
+const conteudoEl = document.querySelector("#projeto-conteudo");
+const erroEl = document.querySelector("#projeto-erro");
 
-let projetoSelecionado = null;
-
-projetos.forEach(function (projeto) {
-
-    if (projeto.id === id) {
-        projetoSelecionado = projeto;
-    }
+const projetoSelecionado = PROJETOS.find(function (projeto) {
+  return projeto.id === id;
 });
 
-if (projetoSelecionado === null) {
-    alert("Projeto não encontrado");
-} else {
-    document.querySelector("#projeto-titulo").textContent = projetoSelecionado.titulo;
-    document.querySelector("#projeto-imagem").src = projetoSelecionado.imagem;
-    document.querySelector("#projeto-descricao").textContent = projetoSelecionado.descricaoLonga;
-    document.querySelector("#projeto-link").href = projetoSelecionado.link;
-
-    const listaTecnologias = document.querySelector("#projeto-tecnologias");
-    listaTecnologias.innerHTML = "";
-
-    projetoSelecionado.tecnologias.forEach(function (tech) {
-        const item = `<li>${tech}</li>`;
-        listaTecnologias.innerHTML += item;
-    });
+function mostrarErro() {
+  document.title = "Projeto não encontrado | Raian Kevin";
+  conteudoEl.hidden = true;
+  erroEl.hidden = false;
 }
 
+if (!projetoSelecionado) {
+  mostrarErro();
+} else {
+  document.title = projetoSelecionado.titulo + " | Raian Kevin";
+  document.querySelector("#projeto-titulo").textContent = projetoSelecionado.titulo;
+  document.querySelector("#projeto-imagem").src = projetoSelecionado.imagem;
+  document.querySelector("#projeto-imagem").alt = "Preview do projeto " + projetoSelecionado.titulo;
+  document.querySelector("#projeto-descricao").textContent = projetoSelecionado.descricaoLonga;
+  document.querySelector("#projeto-link").href = projetoSelecionado.link;
+
+  const listaTecnologias = document.querySelector("#projeto-tecnologias");
+  listaTecnologias.innerHTML = "";
+
+  projetoSelecionado.tecnologias.forEach(function (tech) {
+    listaTecnologias.innerHTML += "<li>" + tech + "</li>";
+  });
+}

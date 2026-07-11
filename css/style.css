@@ -869,10 +869,6 @@ section {
   animation: skills-deslizar var(--skills-carrossel-duracao) linear infinite;
 }
 
-.skills-carrossel:hover .skills-carrossel-faixa {
-  animation-play-state: paused;
-}
-
 .skills-lista {
   display: flex;
   flex-shrink: 0;
@@ -1083,11 +1079,39 @@ section {
   text-decoration: none;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .projeto-detalhe {
   padding: var(--espacamento-grande) 0 var(--espacamento-secao);
   min-height: auto;
   max-width: 720px;
   /* coluna mais estreita e legível */
+}
+
+.projeto-erro {
+  text-align: center;
+  padding: var(--espacamento-grande) 0;
+}
+
+.projeto-erro h1 {
+  font-size: var(--tamanho-subtitulo);
+  margin-bottom: var(--espacamento-medio);
+}
+
+.projeto-erro p {
+  color: var(--cor-texto-suave);
+  margin-bottom: var(--espacamento-grande);
+  line-height: 1.6;
 }
 
 .pagina-projeto .header .container,
