@@ -1424,12 +1424,28 @@ section {
 
   .nav-toggle {
     display: block;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    row-gap: var(--espacamento-pequeno);
+  }
+
+  .nav-logo {
+    order: 1;
   }
 
   .nav-lista {
+    order: 3;
     display: none;
     flex-direction: column;
     width: 100%;
+    gap: var(--espacamento-pequeno);
+    padding-top: var(--espacamento-medio);
+    margin-top: var(--espacamento-pequeno);
+    border-top: 1px solid var(--cor-borda);
   }
 
   .nav-lista.ativo {
