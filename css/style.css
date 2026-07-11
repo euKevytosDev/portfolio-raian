@@ -189,6 +189,16 @@ body::-webkit-scrollbar {
   .skills-lista .skill-item:nth-child(n + 9) {
     display: none;
   }
+
+  .projeto-card-preview--loading::before,
+  .projeto-loading-spinner,
+  .projeto-loading-bar {
+    animation: none !important;
+  }
+
+  .projeto-loading-spinner {
+    border-top-color: var(--cor-destaque);
+  }
 }
 
 .hero {
@@ -629,6 +639,97 @@ section {
   margin-bottom: var(--espacamento-grande);
   flex-grow: 1;
   line-height: 1.55;
+}
+
+/* Card placeholder — projetos a caminho */
+.projeto-card--em-breve {
+  cursor: default;
+  border-style: dashed;
+  border-color: rgba(255, 134, 69, 0.28);
+}
+
+.projeto-card--em-breve:hover {
+  transform: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
+  border-color: rgba(255, 134, 69, 0.45);
+}
+
+.projeto-card-preview {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(73, 70, 255, 0.14) 50%,
+    rgba(255, 134, 69, 0.08) 100%
+  );
+}
+
+.projeto-card-preview--loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 60%
+  );
+  transform: translateX(-100%);
+  animation: projeto-shimmer 2.4s ease-in-out infinite;
+}
+
+.projeto-loading-spinner {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  border-top-color: var(--cor-destaque);
+  border-radius: 50%;
+  animation: projeto-spin 0.85s linear infinite;
+  z-index: 1;
+}
+
+.projeto-loading-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 35%;
+  border-radius: 0 2px 2px 0;
+  background: linear-gradient(90deg, transparent, var(--cor-destaque), transparent);
+  animation: projeto-loading-bar 1.8s ease-in-out infinite;
+}
+
+@keyframes projeto-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes projeto-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes projeto-loading-bar {
+  0% {
+    left: -35%;
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0.4;
+  }
 }
 
 .nav-link.ativo {

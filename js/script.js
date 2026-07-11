@@ -40,6 +40,17 @@ PROJETOS.forEach(function (projeto) {
   grid.innerHTML += card;
 });
 
+grid.innerHTML += `
+  <article class="projeto-card projeto-card--em-breve" aria-label="Mais projetos em produção">
+    <div class="projeto-card-preview projeto-card-preview--loading">
+      <div class="projeto-loading-spinner" aria-hidden="true"></div>
+      <div class="projeto-loading-bar" aria-hidden="true"></div>
+    </div>
+    <h3>Em breve</h3>
+    <p>Mais projetos em produção… Novos trabalhos chegando em breve.</p>
+  </article>
+`;
+
 // --- SKILLS: carrossel infinito ---
 // Uma única <ul> com a sequência duplicada dentro dela.
 // Assim o gap entre Git → HTML é igual ao gap entre todos os ícones (sem buraco no loop).
