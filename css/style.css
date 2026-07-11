@@ -818,6 +818,15 @@ section {
   overflow: hidden;
 }
 
+.skills-conteudo {
+  width: 100%;
+}
+
+.skills-cabecalho {
+  text-align: center;
+  margin-bottom: var(--espacamento-medio);
+}
+
 /* Janela do carrossel — fade largo nas bordas */
 .skills-carrossel {
   position: relative;
