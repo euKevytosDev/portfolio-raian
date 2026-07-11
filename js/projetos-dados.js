@@ -13,6 +13,15 @@ const PROJETOS = [
     link: "https://eukevytosdev.github.io/site-casamento/"
   },
   {
+  id: "padaria-braga",
+  titulo: "Padaria Braga",
+  descricao: "Landing page editorial premium com grid bento, marquee animado e avaliações estilo Google.",
+  descricaoLonga: "Site institucional desenvolvido para a Padaria Braga (bairro Industrial, Contagem-MG). Layout editorial premium com hero assimétrico, tipografia Cormorant Garamond + Outfit, grid bento de produtos, banner full-bleed, depoimentos com nota Google e card de contato sobre mapa. Design distinto, pensado para portfólio — mobile-first, sem frameworks.",
+  imagem: "img/projetos/img-padariabraga.png",
+  tecnologias: ["HTML", "CSS", "JavaScript"],
+  link: "https://eukevytosdev.github.io/padaria-braga-landing/"
+},
+  {
     id: "padaria-lider",
     titulo: "Padaria Líder",
     descricao: "Landing page mobile-first com vitrine e contato via WhatsApp.",
