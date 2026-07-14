@@ -35,7 +35,7 @@ const PROJETOS = [
     titulo: "Dashboard Admin",
     descricao: "Painel administrativo com métricas, gráficos e gestão de dados em tempo real.",
     descricaoLonga: "Dashboard profissional desenvolvido para centralizar indicadores e operações do dia a dia. No front-end, montei a interface com React, cards de métricas, tabelas filtráveis e gráficos interativos. No back-end, API REST em Spring Boot com PostgreSQL, autenticação JWT e endpoints para listagem, filtros e atualização de status. O foco foi usabilidade, performance e visual limpo para uso diário em desktop e tablet.",
-    imagem: "img/projetos/img-dashboard.svg",
+    imagem: "img/projetos/img-dashboard.jpg",
     tecnologias: ["React", "JavaScript", "Spring Boot", "PostgreSQL"],
     link: "#"
   }
