@@ -17,7 +17,7 @@ const PROJETOS = [
   titulo: "Padaria Braga",
   descricao: "Landing page editorial premium com grid bento, marquee animado e avaliações estilo Google.",
   descricaoLonga: "Site institucional desenvolvido para a Padaria Braga (bairro Industrial, Contagem-MG). Layout editorial premium com hero assimétrico, tipografia Cormorant Garamond + Outfit, grid bento de produtos, banner full-bleed, depoimentos com nota Google e card de contato sobre mapa. Design distinto, pensado para portfólio — mobile-first, sem frameworks.",
-  imagem: "img/projetos/img-padariabraga.png",
+  imagem: "img/projetos/img-padariabraga2.png",
   tecnologias: ["HTML", "CSS", "JavaScript"],
   link: "https://eukevytosdev.github.io/padaria-braga-landing/"
 },
@@ -29,5 +29,14 @@ const PROJETOS = [
     imagem: "img/projetos/img-padarialider.png",
     tecnologias: ["HTML", "CSS", "JavaScript"],
     link: "https://eukevytosdev.github.io/padaria-esquina-landing/"
+  },
+  {
+    id: "dashboard-admin",
+    titulo: "Dashboard Admin",
+    descricao: "Painel administrativo com métricas, gráficos e gestão de dados em tempo real.",
+    descricaoLonga: "Dashboard profissional desenvolvido para centralizar indicadores e operações do dia a dia. No front-end, montei a interface com React, cards de métricas, tabelas filtráveis e gráficos interativos. No back-end, API REST em Spring Boot com PostgreSQL, autenticação JWT e endpoints para listagem, filtros e atualização de status. O foco foi usabilidade, performance e visual limpo para uso diário em desktop e tablet.",
+    imagem: "img/projetos/img-dashboard.svg",
+    tecnologias: ["React", "JavaScript", "Spring Boot", "PostgreSQL"],
+    link: "#"
   }
 ];

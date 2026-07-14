@@ -22,7 +22,14 @@ if (!projetoSelecionado) {
   document.querySelector("#projeto-imagem").src = projetoSelecionado.imagem;
   document.querySelector("#projeto-imagem").alt = "Preview do projeto " + projetoSelecionado.titulo;
   document.querySelector("#projeto-descricao").textContent = projetoSelecionado.descricaoLonga;
-  document.querySelector("#projeto-link").href = projetoSelecionado.link;
+
+  const linkEl = document.querySelector("#projeto-link");
+  if (!projetoSelecionado.link || projetoSelecionado.link === "#") {
+    linkEl.hidden = true;
+  } else {
+    linkEl.hidden = false;
+    linkEl.href = projetoSelecionado.link;
+  }
 
   const listaTecnologias = document.querySelector("#projeto-tecnologias");
   listaTecnologias.innerHTML = "";

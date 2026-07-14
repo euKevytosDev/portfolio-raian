@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Placeholder dashboard">
+  <rect width="1200" height="750" fill="#0b0b2e"/>
+  <rect x="0" y="0" width="220" height="750" fill="#12123a"/>
+  <rect x="40" y="40" width="140" height="16" rx="4" fill="#ff8645" opacity="0.85"/>
+  <rect x="40" y="120" width="140" height="12" rx="3" fill="#ffffff" opacity="0.18"/>
+  <rect x="40" y="160" width="120" height="12" rx="3" fill="#ffffff" opacity="0.12"/>
+  <rect x="40" y="200" width="130" height="12" rx="3" fill="#ffffff" opacity="0.12"/>
+  <rect x="40" y="240" width="110" height="12" rx="3" fill="#ffffff" opacity="0.12"/>
+  <rect x="260" y="40" width="280" height="28" rx="6" fill="#ffffff" opacity="0.12"/>
+  <rect x="260" y="100" width="200" height="110" rx="12" fill="#ffffff" opacity="0.06" stroke="#ff8645" stroke-opacity="0.35"/>
+  <rect x="490" y="100" width="200" height="110" rx="12" fill="#ffffff" opacity="0.06" stroke="#4946ff" stroke-opacity="0.35"/>
+  <rect x="720" y="100" width="200" height="110" rx="12" fill="#ffffff" opacity="0.06"/>
+  <rect x="950" y="100" width="200" height="110" rx="12" fill="#ffffff" opacity="0.06"/>
+  <rect x="260" y="250" width="660" height="420" rx="14" fill="#ffffff" opacity="0.05"/>
+  <rect x="950" y="250" width="200" height="200" rx="14" fill="#ffffff" opacity="0.05"/>
+  <rect x="950" y="480" width="200" height="190" rx="14" fill="#ffffff" opacity="0.05"/>
+  <text x="600" y="390" text-anchor="middle" fill="#94a3b8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="600">Adicione sua imagem aqui</text>
+  <text x="600" y="430" text-anchor="middle" fill="#64748b" font-family="Inter, system-ui, sans-serif" font-size="18">img/projetos/img-dashboard.png</text>
+</svg>
