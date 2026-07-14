@@ -24,11 +24,24 @@ if (!projetoSelecionado) {
   document.querySelector("#projeto-descricao").textContent = projetoSelecionado.descricaoLonga;
 
   const linkEl = document.querySelector("#projeto-link");
-  if (!projetoSelecionado.link || projetoSelecionado.link === "#") {
-    linkEl.hidden = true;
+  const avisoLinkEl = document.querySelector("#projeto-aviso-link");
+  const semDemoAoVivo = !projetoSelecionado.link || projetoSelecionado.link === "#";
+
+  linkEl.hidden = false;
+
+  if (semDemoAoVivo) {
+    linkEl.href = "#";
+    linkEl.removeAttribute("target");
+    linkEl.addEventListener("click", function (evento) {
+      evento.preventDefault();
+      avisoLinkEl.hidden = false;
+      avisoLinkEl.textContent =
+        "Este projeto não está disponível para visualização em tempo real no momento.";
+    });
   } else {
-    linkEl.hidden = false;
     linkEl.href = projetoSelecionado.link;
+    linkEl.setAttribute("target", "_blank");
+    avisoLinkEl.hidden = true;
   }
 
   const listaTecnologias = document.querySelector("#projeto-tecnologias");

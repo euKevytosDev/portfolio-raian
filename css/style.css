@@ -1231,6 +1231,14 @@ section {
   line-height: 1.6;
 }
 
+.projeto-aviso-link {
+  margin-top: var(--espacamento-medio);
+  color: var(--cor-texto-suave);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 28rem;
+}
+
 .pagina-projeto .header .container,
 .pagina-projeto .projeto-detalhe {
   max-width: 720px;
