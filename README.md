@@ -97,6 +97,7 @@ portfolio-raian/
 | Site de casamento | [site-casamento](https://github.com/euKevytosDev/site-casamento) |
 | Landing Padaria Líder | [padaria-esquina-landing](https://github.com/euKevytosDev/padaria-esquina-landing) |
 | Landing Padaria Braga | [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing) |
+| Landing MAK Embreagens | [mak-embreagens](https://github.com/euKevytosDev/mak-embreagens) |
 | Gestor de estoque (API) | [gestor-estoque-backend](https://github.com/euKevytosDev/gestor-estoque-backend) |
 | Gestor de estoque (front) | [gestor-estoque-frontend](https://github.com/euKevytosDev/gestor-estoque-frontend) |
 
