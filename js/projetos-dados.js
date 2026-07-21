@@ -5,12 +5,21 @@
 const PROJETOS = [
   {
     id: "casamento",
-    titulo: "Rafaella & Kevin",
-    descricao: "Site de casamento completo com confirmação de presença e lista de presentes.",
-    descricaoLonga: "Site completo para o casamento de Rafaella e Kevin, pensado para os convidados acessarem pelo celular. No front-end, desenvolvi a experiência do convite animado, galeria de fotos, confirmação de presença em família e lista de presentes com reserva online. No back-end, criei uma API REST em Spring Boot com PostgreSQL (Neon), autenticação JWT para o painel admin e deploy na Render. Foi o projeto que mais me fez evoluir em JavaScript com fetch e integração com API.",
+    titulo: "RK Sites · Casamento",
+    descricao: "Plataforma SaaS para sites de casamento — RSVP, presentes via Pix/cartão e painel admin multi-tenant.",
+    descricaoLonga: "O que começou como site para o casamento de Rafaella e Kevin evoluiu para uma plataforma SaaS completa (RK Sites). Cada casal recebe um site mobile-first personalizável, com convite animado, galeria, confirmação de presença em família e lista de presentes com Pix ou cartão. No back-end, API REST multi-tenant em Spring Boot + PostgreSQL (Neon): isolamento por site via X-Site-Id, JWT no admin, upload de imagens (Cloudinary) e fluxo de assinatura. Painel admin com visual SaaS para gerenciar presenças, presentes e configurações — pronto para escalar novos casamentos no mesmo servidor.",
     imagem: "img/projetos/img-casamento.jpg",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL", "JWT"],
+    link: "https://rafaekevin.com.br/"
+  },
+  {
+    id: "pelada-oficial",
+    titulo: "Pelada Oficial",
+    descricao: "App mobile-first para organizar pelada: login, sorteio de times, placar ao vivo e súmula em PDF.",
+    descricaoLonga: "Sistema web mobile-first para controlar pelada entre amigos com conta própria (SaaS). O usuário cadastra jogadores com nível de estrelas, sorteia times equilibrados, marca gols e cartões ao vivo e acompanha a classificação até encerrar a rodada. Inclui continuidade de pelada em andamento, geração de súmula (PDF/planilha), compartilhamento via WhatsApp e modo colar planilha. Front-end em HTML, CSS e JavaScript puro; back-end Spring Boot com autenticação, persistência de dados e regras do jogo (vitória 3 pts, empate 1, derrota 0). Pensado para uso no celular durante o jogo.",
+    imagem: "img/projetos/img-pelada.jpg",
     tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL"],
-    link: "https://eukevytosdev.github.io/site-casamento/"
+    link: "https://eukevytosdev.github.io/pelada-oficial/"
   },
   {
     id: "mak-embreagens",
