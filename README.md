@@ -1,108 +1,76 @@
 # Portfólio — Raian Kevin
 
-Site de portfólio pessoal desenvolvido com **HTML, CSS e JavaScript puro** (vanilla), com foco em aprender JavaScript na prática enquanto construo uma presença profissional online.
+Meu site de portfólio em HTML, CSS e JavaScript puro. Usei pra estudar JS na prática e, ao mesmo tempo, ter um lugar pra mostrar o que venho construindo.
 
-> Domínio futuro planejado: **raiandev.com.br**
+Domínio planejado: **raiandev.com.br**
 
 ## Demo
 
-- Repositório: https://github.com/euKevytosDev/portfolio-raian
-- GitHub Pages: *(ativar em Settings → Pages → branch `main`)*
+- Repo: https://github.com/euKevytosDev/portfolio-raian  
+- GitHub Pages: ative em Settings → Pages → branch `main` (se ainda não estiver no ar)
 
-## Sobre o projeto
+## Ideia do projeto
 
-Este portfólio reúne minhas principais habilidades e projetos como desenvolvedor Full Stack em formação. O visual foi inspirado em portfólios profissionais modernos (layout escuro, tipografia limpa, responsivo).
+Layout escuro, tipografia limpa, mobile-first. Nada de framework — a proposta era entender o básico bem feito: menu, scroll, gerar cards a partir de dados.
 
-O diferencial deste projeto é o **aprendizado progressivo**: cada funcionalidade em JavaScript foi construída em etapas, com conceitos pequenos e comentados no código.
+Os projetos listados na página vêm de um array no JS. Assim eu adiciono ou tiro um trabalho sem ficar copiando HTML.
 
 ## Stack
 
-| Tecnologia | Uso |
-|---|---|
-| HTML5 | Estrutura semântica das seções |
-| CSS3 | Layout, variáveis, responsividade |
-| JavaScript (vanilla) | Menu mobile, cards dinâmicos, interações |
+HTML5 · CSS3 (variáveis + responsivo) · JavaScript vanilla
 
-## Funcionalidades
+## O que tem hoje
 
-- **Hero** com apresentação e botão de contato
-- **Menu responsivo** com hambúrguer no celular
-- **Cards de projetos** gerados dinamicamente via `array` + `forEach`
-- **Menu fecha** automaticamente ao clicar em um link (mobile)
-- Header fixo no topo ao rolar a página
+- Hero com apresentação e CTA de contato  
+- Menu hambúrguer no celular (fecha ao clicar no link)  
+- Cards de projetos montados com `forEach`  
+- Header fixo ao rolar  
 
-## Estrutura de pastas
+## Pastas
 
 ```text
 portfolio-raian/
-├── index.html          # Página principal
+├── index.html
 ├── css/
-│   ├── variaveis.css   # Cores, fontes e espaçamentos
-│   └── style.css       # Estilos e layout
+│   ├── variaveis.css   # cores, fontes, espaçamento
+│   └── style.css
 ├── js/
-│   └── script.js       # Menu, projetos e interações
-├── img/
-│   ├── perfil/         # Fotos pessoais
-│   └── projetos/       # Prints dos projetos
-└── README.md
+│   └── script.js       # menu + lista de projetos
+└── img/
+    ├── perfil/
+    └── projetos/
 ```
 
-## Conceitos de JavaScript aplicados
+## JS que aparece no código
 
-| Conceito | Onde é usado |
-|---|---|
-| `querySelector` / `querySelectorAll` | Selecionar botões, menu e grid |
-| `addEventListener` | Cliques no menu e nos links |
-| `function` | Abrir/fechar menu |
-| `classList.toggle` / `remove` | Mostrar/esconder menu mobile |
-| `array` + `objeto` | Lista de projetos |
-| `forEach` | Gerar cards na tela |
-| `innerHTML` | Inserir HTML dinamicamente |
-| Template strings | Montar cards com `${}` |
+- Seleção de elementos (`querySelector` / `querySelectorAll`)
+- Eventos de clique no menu
+- `classList` pra abrir/fechar o drawer
+- Array de objetos + `forEach` + template string pra gerar os cards
 
-## Etapas do desenvolvimento
+Fui montando por etapas (estrutura → hero → menu → cards → polimento). Ainda quero página de detalhe do projeto (`projeto.html?id=...`), foto no hero e ícones das techs.
 
-- [x] Etapa 0 — Estrutura base (HTML + CSS variáveis)
-- [x] Etapa 1 — Hero estilizado + primeiro JavaScript
-- [x] Etapa 2 — Menu mobile (funções do zero)
-- [x] Etapa 3 — Cards de projetos (array + forEach)
-- [x] Etapa 4 — Menu fecha ao clicar em link + destaque no scroll
-- [x] Etapa 5 — Links reais de contato
-- [x] Etapa 6 — Polimento visual (Skills, Sobre, footer)
+## Rodar local
 
-### Próximas etapas (planejado)
+```bash
+git clone https://github.com/euKevytosDev/portfolio-raian.git
+```
 
-- [ ] **Etapa 7** — Página de detalhes do projeto (print + descrição + botão "Ver ao vivo")
-  - Card abre `projeto.html?id=casamento` dentro do portfólio
-  - JS novo: `URLSearchParams` para ler o `id` da URL
-- [ ] **Etapa 8** — Avatar/foto no Hero
-- [ ] **Etapa 9** — Ícones das tecnologias (HTML, CSS, JS, Java…)
-- [ ] **Etapa 10** — Visual premium (formas no fundo, barra social fixa)
+Abre o `index.html` ou usa Live Server. No celular: F12 → modo responsivo.
 
-> Domínio futuro: **raiandev.com.br**
+## Outros projetos no GitHub
 
-## Como rodar localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/euKevytosDev/portfolio-raian.git
-   ```
-2. Abra `index.html` no navegador **ou** use a extensão **Live Server** no Cursor/VS Code.
-3. Para testar o menu mobile: F12 → modo celular (Cmd+Shift+M no Mac).
-
-## Projetos relacionados
-
-| Projeto | Repositório |
-|---|---|
+| Projeto | Repo |
+|---------|------|
 | Site de casamento | [site-casamento](https://github.com/euKevytosDev/site-casamento) |
-| Landing Padaria Líder | [padaria-esquina-landing](https://github.com/euKevytosDev/padaria-esquina-landing) |
-| Landing Padaria Braga | [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing) |
-| Landing MAK Embreagens | [mak-embreagens](https://github.com/euKevytosDev/mak-embreagens) |
+| Padaria Líder | [padaria-esquina-landing](https://github.com/euKevytosDev/padaria-esquina-landing) |
+| Padaria Braga | [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing) |
+| MAK Embreagens | [mak-embreagens](https://github.com/euKevytosDev/mak-embreagens) |
 | Gestor de estoque (API) | [gestor-estoque-backend](https://github.com/euKevytosDev/gestor-estoque-backend) |
 | Gestor de estoque (front) | [gestor-estoque-frontend](https://github.com/euKevytosDev/gestor-estoque-frontend) |
 
-## Autor
+## Sobre mim
 
-**Raian Kevin** — Estudante de ADS (4º semestre), Full Stack Developer em formação.
+Raian Kevin — estudante de ADS (4º semestre), Full Stack em formação.
 
-- GitHub: [@euKevytosDev](https://github.com/euKevytosDev)
+GitHub: [@euKevytosDev](https://github.com/euKevytosDev)
