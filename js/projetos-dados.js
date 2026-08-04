@@ -4,13 +4,31 @@
 */
 const PROJETOS = [
   {
+    id: "loven-surpresa",
+    titulo: "Loven Surpresa",
+    descricao: "SaaS de surpresas digitais — wizard, pagamento Asaas e página pública personalizada.",
+    descricaoLonga: "Produto SaaS completo (somosloven.com.br) para criar surpresas digitais românticas ou de amizade. O fluxo inclui landing, planos, wizard em 9 passos (fotos, carta, música, tema), autenticação JWT, checkout Pix/cartão via Asaas, webhook de confirmação e página pública da história por slug. Upload de imagens no Cloudinary e painel admin. Front-end em HTML, CSS e JavaScript; back-end Spring Boot 3 com API REST. Mesmo ecossistema da marca Loven, com o produto de casamento em casamento.somosloven.com.br.",
+    imagem: "img/projetos/img-loven.jpg",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL", "Asaas", "Cloudinary"],
+    link: "https://somosloven.com.br/"
+  },
+  {
     id: "casamento",
     titulo: "RK Sites · Casamento",
     descricao: "Plataforma SaaS para sites de casamento — RSVP, presentes via Pix/cartão e painel admin multi-tenant.",
-    descricaoLonga: "O que começou como site para o casamento de Rafaella e Kevin evoluiu para uma plataforma SaaS completa (RK Sites). Cada casal recebe um site mobile-first personalizável, com convite animado, galeria, confirmação de presença em família e lista de presentes com Pix ou cartão. No back-end, API REST multi-tenant em Spring Boot + PostgreSQL (Neon): isolamento por site via X-Site-Id, JWT no admin, upload de imagens (Cloudinary) e fluxo de assinatura. Painel admin com visual SaaS para gerenciar presenças, presentes e configurações — pronto para escalar novos casamentos no mesmo servidor.",
+    descricaoLonga: "O que começou como site para o casamento de Rafaella e Kevin evoluiu para uma plataforma SaaS completa (hoje sob a marca Loven / RK Sites). Cada casal recebe um site mobile-first personalizável, com convite animado, galeria, confirmação de presença em família e lista de presentes com Pix ou cartão. No back-end, API REST multi-tenant em Spring Boot + PostgreSQL (Neon): isolamento por site via X-Site-Id, JWT no admin, upload de imagens (Cloudinary) e fluxo de assinatura. Painel admin com visual SaaS para gerenciar presenças, presentes e configurações — pronto para escalar novos casamentos no mesmo servidor.",
     imagem: "img/projetos/img-casamento.jpg",
     tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL", "JWT"],
-    link: "https://rafaekevin.com.br/"
+    link: "https://casamento.somosloven.com.br/"
+  },
+  {
+    id: "barberini",
+    titulo: "Barberini Barbearia",
+    descricao: "App mobile-first de agendamento — serviços, barbeiros, horários e painel do dono.",
+    descricaoLonga: "App web com cara de aplicativo de celular para agendamento em barbearia. O cliente escolhe serviço ou profissional, vê slots dos próximos dias e confirma o horário; o rascunho fica no localStorage e só na confirmação final a API Spring Boot grava o agendamento. Inclui login/cadastro, agenda sincronizada, link para Google Calendar e painel do dono (CRUD de barbeiros/serviços, bloqueios e lista de agendamentos). Front-end HTML/CSS/JS; back-end Spring Boot com seed de dados. Publicado no GitHub Pages com API na Render.",
+    imagem: "img/projetos/img-barberini.jpg",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Spring Boot", "PostgreSQL"],
+    link: "https://eukevytosdev.github.io/Barberini/"
   },
   {
     id: "pelada-oficial",
