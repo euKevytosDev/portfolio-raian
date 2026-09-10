@@ -1,54 +1,50 @@
 # Portfólio — Raian Kevin
 
-Meu site de portfólio em HTML, CSS e JavaScript puro. Usei pra estudar JS na prática e, ao mesmo tempo, ter um lugar pra mostrar o que venho construindo.
+Portfólio pessoal com foco em **backend Java e Spring Boot**. HTML, CSS e JavaScript puro — sem frameworks no site.
 
-Domínio planejado: **raiandev.com.br**
+**Site:** https://raiankevin.com.br/
 
-## Demo
+## Posicionamento
 
-- Repo: https://github.com/euKevytosDev/portfolio-raian  
-- GitHub Pages: ative em Settings → Pages → branch `main` (se ainda não estiver no ar)
+Desenvolvedor backend · Java · Spring Boot · APIs REST · PostgreSQL
 
-## Ideia do projeto
+(Front HTML/CSS/JS quando a solução precisa fechar de ponta a ponta — **sem TypeScript**.)
 
-Layout escuro, tipografia limpa, mobile-first. Nada de framework — a proposta era entender o básico bem feito: menu, scroll, gerar cards a partir de dados.
-
-Os projetos listados na página vêm de um array no JS. Assim eu adiciono ou tiro um trabalho sem ficar copiando HTML.
-
-## Stack
+## Stack do site
 
 HTML5 · CSS3 (variáveis + responsivo) · JavaScript vanilla
 
-## O que tem hoje
+## O que tem
 
-- Hero com apresentação e CTA de contato  
-- Menu hambúrguer no celular (fecha ao clicar no link)  
-- Cards de projetos montados com `forEach`  
-- Header fixo ao rolar  
+- Hero com posicionamento backend  
+- Cards de projetos (Spring Boot em destaque primeiro)  
+- Página de detalhe (`projeto.html?id=...`)  
+- Skills com Java / Spring Boot / PostgreSQL em evidência  
+- Menu mobile e scroll ativo  
 
 ## Pastas
 
 ```text
 portfolio-raian/
 ├── index.html
+├── projeto.html
 ├── css/
-│   ├── variaveis.css   # cores, fontes, espaçamento
-│   └── style.css
 ├── js/
-│   └── script.js       # menu + lista de projetos
+│   ├── projetos-dados.js   # lista de projetos (edite aqui)
+│   ├── script.js
+│   └── projeto.js
 └── img/
-    ├── perfil/
-    └── projetos/
 ```
 
-## JS que aparece no código
+## Projetos em destaque (backend)
 
-- Seleção de elementos (`querySelector` / `querySelectorAll`)
-- Eventos de clique no menu
-- `classList` pra abrir/fechar o drawer
-- Array de objetos + `forEach` + template string pra gerar os cards
-
-Fui montando por etapas (estrutura → hero → menu → cards → polimento). Ainda quero página de detalhe do projeto (`projeto.html?id=...`), foto no hero e ícones das techs.
+| Projeto | Stack |
+|---------|--------|
+| Loven Surpresa | Spring Boot, JWT, Asaas, PostgreSQL |
+| RK Sites · Casamento | Spring Boot multi-tenant, JWT |
+| Barberini | Spring Boot + agendamento |
+| Pelada Oficial | Spring Boot + regras de jogo |
+| Gestor de Estoque | API REST Java + JPA + PostgreSQL |
 
 ## Rodar local
 
@@ -56,21 +52,10 @@ Fui montando por etapas (estrutura → hero → menu → cards → polimento). A
 git clone https://github.com/euKevytosDev/portfolio-raian.git
 ```
 
-Abre o `index.html` ou usa Live Server. No celular: F12 → modo responsivo.
-
-## Outros projetos no GitHub
-
-| Projeto | Repo |
-|---------|------|
-| Site de casamento | [site-casamento](https://github.com/euKevytosDev/site-casamento) |
-| Padaria Líder | [padaria-esquina-landing](https://github.com/euKevytosDev/padaria-esquina-landing) |
-| Padaria Braga | [padaria-braga-landing](https://github.com/euKevytosDev/padaria-braga-landing) |
-| MAK Embreagens | [mak-embreagens](https://github.com/euKevytosDev/mak-embreagens) |
-| Gestor de estoque (API) | [gestor-estoque-backend](https://github.com/euKevytosDev/gestor-estoque-backend) |
-| Gestor de estoque (front) | [gestor-estoque-frontend](https://github.com/euKevytosDev/gestor-estoque-frontend) |
+Abra o `index.html` ou use Live Server.
 
 ## Sobre mim
 
-Raian Kevin — estudante de ADS (4º semestre), Full Stack em formação.
+Raian Kevin — estudante de ADS, desenvolvedor focado em **backend Java e Spring Boot**.
 
 GitHub: [@euKevytosDev](https://github.com/euKevytosDev)
