@@ -1,35 +1,35 @@
 /*
   Lista única de projetos — usada na home (cards) e na página de detalhe.
   Ao adicionar um projeto novo, altere só este arquivo.
-  Ordem: projetos com backend Java/Spring primeiro.
+  Ordem: produtos/SaaS com backend primeiro.
 */
 const PROJETOS = [
   {
-    id: "loven-surpresa",
-    titulo: "Loven Surpresa",
-    descricao: "SaaS com API Spring Boot — wizard, JWT, pagamento Asaas, webhook e página pública.",
-    descricaoLonga: "Produto SaaS completo (somosloven.com.br) para criar surpresas digitais. O back-end em Spring Boot 3 expõe API REST com autenticação JWT, checkout Pix/cartão via Asaas, webhook de confirmação, upload no Cloudinary e painel admin. Front em HTML, CSS e JavaScript. Foco do projeto: regras de negócio, integração de pagamento e persistência em PostgreSQL.",
-    imagem: "img/projetos/img-loven.jpg",
-    tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JWT", "Asaas", "JavaScript"],
-    link: "https://somosloven.com.br/"
+    id: "max-pedidos",
+    titulo: "MaxPedidos",
+    descricao: "SaaS de pedidos para o comércio de bairro — loja no celular, fila no painel e pagamento.",
+    descricaoLonga: "Plataforma SaaS multi-tenant para padaria, açougue, lanchonete, hortifruti e mercadinho. Cada loja ganha o próprio link, catálogo, checkout (entrega ou retirada) e painel da fila. API REST em Spring Boot com JWT, isolamento por establishment_id, PostgreSQL + Flyway, quote/checkout recalculado no servidor, webhooks de pagamento, cupons, estoque e Cloudinary. Front em HTML, CSS e JavaScript. O cliente pede pelo link; a loja vê a fila, cobra e despacha — sem o cliente instalar app.",
+    imagem: "img/projetos/img-maxpedidos.jpg",
+    tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JWT", "JavaScript"],
+    link: "https://eukevytosdev.github.io/folha-saas/"
+  },
+  {
+    id: "cliqueplay",
+    titulo: "CliquePlay",
+    descricao: "Replay da quadra: um toque no botão e o lance dos últimos 30s aparece no celular.",
+    descricaoLonga: "Produto para quadras e peladas: a câmera Intelbras manda o vídeo via RTSP, o servidor mantém um buffer contínuo e o POST /clip corta o MP4 dos últimos ~30 segundos. O card do lance abre no celular para assistir e baixar, sem precisar de conta. Stack Python (FastAPI/Uvicorn) + FFmpeg, com site e API no mesmo serviço. Conta opcional, favoritos e pedido de vídeo reservado já entram no fluxo; o domínio é cliqueplay.com.br.",
+    imagem: "img/projetos/img-cliqueplay.jpg",
+    tecnologias: ["Python", "FastAPI", "FFmpeg", "RTSP", "JavaScript"],
+    link: "https://cliqueplay.com.br/"
   },
   {
     id: "casamento",
     titulo: "RK Sites · Casamento",
     descricao: "API multi-tenant Spring Boot — RSVP, presentes Pix/cartão, JWT e isolamento por site.",
-    descricaoLonga: "Plataforma SaaS de sites de casamento (Loven / RK Sites). No back-end, API REST multi-tenant em Spring Boot + PostgreSQL (Neon): isolamento por site via X-Site-Id, JWT no admin, upload (Cloudinary) e fluxo de assinatura. Front mobile-first com RSVP, galeria e lista de presentes. O diferencial técnico está no modelo multi-tenant e nas regras de negócio no servidor.",
+    descricaoLonga: "Plataforma SaaS de sites de casamento (RK Sites). No back-end, API REST multi-tenant em Spring Boot + PostgreSQL (Neon): isolamento por site via X-Site-Id, JWT no admin, upload (Cloudinary) e fluxo de assinatura. Front mobile-first com RSVP, galeria e lista de presentes. O diferencial técnico está no modelo multi-tenant e nas regras de negócio no servidor.",
     imagem: "img/projetos/img-casamento.jpg",
     tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JWT", "JavaScript"],
     link: "https://casamento.somosloven.com.br/"
-  },
-  {
-    id: "barberini",
-    titulo: "Barberini Barbearia",
-    descricao: "API Spring Boot de agendamento — serviços, barbeiros, slots e painel do dono.",
-    descricaoLonga: "Sistema de agendamento para barbearia. A API Spring Boot grava horários, sincroniza agenda, gera link pro Google Calendar e alimenta o painel do dono (CRUD de barbeiros/serviços, bloqueios e lista). Front mobile-first em HTML/CSS/JS; back-end com seed de dados e regras de disponibilidade. Publicado no GitHub Pages com API na Render.",
-    imagem: "img/projetos/img-barberini.jpg",
-    tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JavaScript"],
-    link: "https://eukevytosdev.github.io/Barberini/"
   },
   {
     id: "pelada-oficial",
@@ -39,24 +39,6 @@ const PROJETOS = [
     imagem: "img/projetos/img-pelada.jpg",
     tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JavaScript"],
     link: "https://eukevytosdev.github.io/pelada-oficial/"
-  },
-  {
-    id: "gestor-estoque",
-    titulo: "Gestor de Estoque · API",
-    descricao: "API REST em Java + Spring Boot — CRUD de produtos com JPA e PostgreSQL.",
-    descricaoLonga: "Back-end de estudo focado em API REST de verdade: entidade Produto, repository JPA, controller REST e PostgreSQL. Endpoints GET/POST/DELETE de produtos (nome, preço e quantidade). Stack Java 17, Spring Boot, Spring Data JPA e Maven — projeto enxuto pra praticar o caminho JSON → serviço → banco, sem overengineering.",
-    imagem: "img/projetos/img-gestor-estoque.jpg",
-    tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JPA", "Maven"],
-    link: "https://github.com/euKevytosDev/gestor-estoque-backend"
-  },
-  {
-    id: "dashboard-admin",
-    titulo: "Dashboard Admin",
-    descricao: "API Spring Boot com JWT + painel de métricas, filtros e gestão de status.",
-    descricaoLonga: "Dashboard para centralizar indicadores e operações. No back-end, API REST em Spring Boot com PostgreSQL, autenticação JWT e endpoints de listagem, filtros e atualização de status. No front, interface em React com cards, tabelas e gráficos. Foco em usabilidade e um back-end organizado para uso diário.",
-    imagem: "img/projetos/img-dashboard.jpg",
-    tecnologias: ["Java", "Spring Boot", "PostgreSQL", "JWT", "React"],
-    link: "#"
   },
   {
     id: "mak-embreagens",

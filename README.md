@@ -36,15 +36,14 @@ portfolio-raian/
 └── img/
 ```
 
-## Projetos em destaque (backend)
+## Projetos em destaque
 
 | Projeto | Stack |
 |---------|--------|
-| Loven Surpresa | Spring Boot, JWT, Asaas, PostgreSQL |
+| MaxPedidos | Spring Boot multi-tenant, JWT, PostgreSQL |
+| CliquePlay | Python, FastAPI, FFmpeg, RTSP |
 | RK Sites · Casamento | Spring Boot multi-tenant, JWT |
-| Barberini | Spring Boot + agendamento |
 | Pelada Oficial | Spring Boot + regras de jogo |
-| Gestor de Estoque | API REST Java + JPA + PostgreSQL |
 
 ## Rodar local
 
